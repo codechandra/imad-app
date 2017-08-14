@@ -11,6 +11,12 @@ app.get('/', function (req, res) {
 app.get('/thankyou.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'thankyou.html'));
 });
+app.get('/signup.html', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'signup.html'));
+});
+app.get('/forgot.html', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'forgot.html'));
+});
 app.get('/article', function (req, res) {
   res.send('Hi');
 });
