@@ -15,7 +15,7 @@ app.get('/signup.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'signup.html'));
 });
 function hash(input,salt){
-    var hashed=crypto.crypto.pbkdf2Sync(input,salt,10000,512, 'sha512');
+    var hashed=crypto.pbkdf2Sync(input,salt,10000,512, 'sha512');
     return hashed.toString('hex');    
     
 }
