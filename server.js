@@ -12,7 +12,7 @@ app.get('/thankyou.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'thankyou.html'));
 });
 app.get('/signup.html', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'signup.html'));
+  res.send(path.join(__dirname, 'ui', 'signup.html'));
 });
 function hash(input,salt){
     var hashed=crypto.pbkdf2Sync(input,salt,10000,512, 'sha512');
