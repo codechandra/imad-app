@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="refresh" content="100000">
+<title>OVM</title>
+<script>
+var tdp=0,bjp=0,countt=0,ysr=0,jp=0,lp=0,cp=0,trs=0,nota=0,rig=0;
+function recordd()
+{
+	if(document.getElementById('1').checked)
+	{
+		tdp++;
+
+	}
+	else if(document.getElementById('2').checked)
+	{
+		bjp++;
+
+	}
+	else if(document.getElementById('3').checked)
+	{
+		ysr++;
+	}
+	else if(document.getElementById('4').checked)
+	{
+		jp++;
+	}
+	else if(document.getElementById('5').checked)
+	{
+		lp++;
+	}
+	else if(document.getElementById('6').checked)
+	{
+		cp++;
+	}
+	else if(document.getElementById('7').checked)
+	{
+		trs++;
+	}
+	else if(document.getElementById('8').checked)
+	{
+		nota++;
+	}
+	countt++;
+	document.getElementById('show').style.display='none';
+	document.getElementById('voterid').style.display='block';
+	window.alert("Thank you for casting your valuable vote.")
+	
+}
+function call()
+{
+	document.getElementById('dis').style.display='block';
+	document.getElementById('voterid').style.display='none';
+	
+}
+function voter()
+{
+	document.getElementById('show').style.display='block';
+	document.getElementById('voterid').style.display='none';
+}
+function count()
+{
+
+	document.write("Telugu Desam Party bagged "+((tdp/countt)*100.0)+"% out of "+countt+" votes"+"<br>");
+	document.write("Bharathiya Janatha Party bagged "+((bjp/countt)*100.0)+"% out of "+countt+" votes"+"<br>");
+	document.write("YSR Congress Party bagged "+((ysr/countt)*100.0)+"% out of "+countt+" votes"+"<br>");
+	document.write("Janasena Party bagged "+((jp/countt)*100.0)+"% out of "+countt+" votes"+"<br>");
+	document.write("Loksatha Party bagged "+((lp/countt)*100.0)+"% out of "+countt+" votes"+"<br>");
+	document.write("Telangana Rashtriya Samithi  bagged "+((trs/countt)*100.0)+"% out of "+countt+" votes"+"<br>");
+	document.write("Congress Party bagged "+((cp/countt)*100.0)+"% out of "+countt+" votes"+"<br>");
+	document.write(((countt/nota)*100.0) +"% voted for none"+"<br>");
+	
+}
+</script>
+</head>
+<body style="background-color:grey;color:white;background-image:a.JPG">
+<center>
+<form>
+<div style="font-size:150% ;font-family:Times new roman ">
+<div style="text-align:center;margin-top:200px;background-image:a.jpg" id="voterid">
+Enter your voter-id <input type="text" maxlength="12" required id="voter_id"><br>
+<input type="button" value="Go to vote" onClick="voter()">
+<input type="button" value ="End poling" onClick="call()"><br>
+</div>
+<div style="display:none ;color:black;margin-top:200px;border-style:dotted;border-radius:20px;padding-left:200px;background-color:white" id="show"  >
+<input type="radio" id="1" name="vote">Telugu Desam Party(TDP)<br>
+<input type="radio" id="2" name="vote">Bharathiya Janatha Party(BJP)<br>
+<input type="radio" id="3" name="vote">YSR Congress Party(YSRCP)<br>
+<input type="radio" id="4" name="vote">Janasena Party<br>
+<input type="radio" id="5" name="vote">Loksatha Party<br>
+<input type="radio" id="6" name="vote">Congress Party<br>
+<input type="radio" id="7" name="vote">Telangana Rashtriya Samithi(TRS)<br>
+<input type="radio" id="8" name="vote">None Of The Above(NOTA)<br>
+
+
+<input type="button" value="vote" onClick="recordd()"><br>
+
+</div>
+
+<div style="display:none; margin-top:200px" id="dis">
+<input style="" type="password" placeholder="Enter the key">
+<input type="button" value="count the votes" onClick="count()">
+</div>
+</div>
+</form>
+<h3>&copy;All rights reserved by Chandra mouli</h3>
+</center>
+</body>
+</html>
