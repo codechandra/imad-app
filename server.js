@@ -9,8 +9,8 @@ app.use(morgan('combined'));
 var config={
     user:'codechandra',
     database:'http://db.imad.hasura-app.io',
-    host:'0.0.21.56:5432',
-    password:'db-codechandra-48847'
+    host:'localhost:5432',
+    password:process.env.DB_PASSWORD
 };
 var pool=new Pool(config);
 
