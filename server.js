@@ -6,12 +6,12 @@ var app = express();
 var Pool=require('pg').Pool;
 
 app.use(morgan('combined'));
-var config={
+/*var config={
     user:'codechandra',
     database:'http://db.imad.hasura-app.io',
     host:'5432',
     password:process.env.DB_PASSWORD
-};
+};*/
 var pool=new Pool(config);
 
 app.get('/test-db',function(req,res){
