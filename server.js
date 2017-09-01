@@ -12,10 +12,10 @@ var config={
     host:'5432',
     password:'db-codechandra-48847'
 };
-var pool=new Pool(config);
+
 
 app.get('/test-db',function(req,res){
-   pool.query('select *from user',function(err,result){
+   pool.query('SELECT *FROM article',function(err,result){
        if(err){
            res.status(500).send(err.toString());
        }
