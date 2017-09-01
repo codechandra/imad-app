@@ -10,7 +10,7 @@ var config={
     user:'codechandra',
     database:'http://db.imad.hasura-app.io',
     host:'5432',
-    password:'mouli'
+    password:'db-codechandra-48847'
 };
 var pool=new Pool(config);
 
