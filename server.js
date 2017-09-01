@@ -41,7 +41,7 @@ function hash(input,salt){
 }
 app.get('/vote.html',function(req,res){
     res.sendFile(path.join(__dirname, 'ui', 'vote.html'));
-})
+});
 
 app.get('/hash/:input', function (req, res) {
     var hashedString=hash(req.params.input,'this-is-some-random-string');
