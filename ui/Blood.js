@@ -4,7 +4,7 @@ var path = require('path');
 var crypto = require('crypto');
 var app = express();
 var Pool=require('pg').Pool;
-
+var app=express();
 app.use(morgan('combined'));
 var config={
     user:'codechandra',
@@ -44,3 +44,4 @@ function search_recipent()
     });
     
 }
+app.listen('80');
