@@ -18,7 +18,7 @@ function donor()
     var opt = group.options[group.selectedIndex].text;
     window.alert(opt);
     
-   // var s='/'+num;
-//    window.open(s);
+    var s='/'+num+opt;
+   window.open(s);
     
 }
