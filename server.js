@@ -66,12 +66,12 @@ function hash(input,salt){
 app.get('/vote.html',function(req,res){
     res.sendFile(path.join(__dirname, 'ui', 'vote.html'));
 });
-app.get('/ui/Blood.js', function (req, res) {
+app.get('/Blood.html', function (req, res) {
    res.sendFile(path.join(__dirname, 'ui', 'Blood.html'));
 });
 
 
-app.get('hash/:input', function (req, res) {
+app.get('/hash/:input', function (req, res) {
     var hashedString=hash(req.params.input,'this-is-some-random-string');
   res.send(hashedString);
 });
@@ -88,6 +88,9 @@ app.get('/counter', function (req, res) {
 });
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
+});
+app.get('/ui/Blood.js', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'Blood.js'));
 });
 
 app.get('/ui/madi.png', function (req, res) {
