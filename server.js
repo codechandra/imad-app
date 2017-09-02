@@ -79,6 +79,7 @@ app.get('/recipent/:id',function(req,res){
            for(i=0;i<data.length;i++)
            {
                res.send(data[i].donor_name);
+               res.send(data[i].donor_mobile);
            }
            
        }
