@@ -74,8 +74,12 @@ app.get('/recipent/:id',function(req,res){
        }
        else
        {
-           res.send(JSON.stringify(result.rows[0].donor_name.trim()));
-            res.send(JSON.stringify(result.rows[0].donor_mobile));
+          var d=result;
+          var i=0;
+          for(i=0;i<result.length;i++)
+          {
+              res.send(result[i]);
+          }
        }
        
    }) ;
