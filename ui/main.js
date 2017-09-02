@@ -16,7 +16,7 @@ function donor()
     var num=document.getElementById('number_recipent').value;
     var group=document.getElementById('h');
     var opt = group.options[group.selectedIndex];
-    window.alert(group);
+    window.alert(group.value);
     
    // var s='/'+num;
 //    window.open(s);
