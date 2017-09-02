@@ -74,10 +74,15 @@ app.get('/recipent/:id',function(req,res){
        }
        else
        {
-          
           var data=[];
-          data=result.rows;
-          data.forEach(myFunction);
+          data=JSON.stringify(result.rows);
+          var i, item;
+for (i = 0; i < data.length; i++) {
+    for (item in data[i]) {
+        res.send(item + ": " + data[i][item] + "<br>");
+    }
+}
+    
          
        }
        
@@ -85,12 +90,6 @@ app.get('/recipent/:id',function(req,res){
    }) ;
     
 });
-function myFunction (item, index,data) {
-
-  for( var key in item ) {
-    res.send(data[key]);
-  }
-}
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
