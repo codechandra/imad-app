@@ -75,7 +75,11 @@ app.get('/recipent/:id',function(req,res){
        else
        {
            var data=result.rows;
-           res.send(data);
+           var s=[];
+           s=data;
+           res.send(s[2]);
+           
+           
            
        }
           /*var data=[];
