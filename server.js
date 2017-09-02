@@ -28,7 +28,7 @@ app.get('/test-db',function(req,res){
    }) ;
 });
 
-app.get('/ui/index.html', function (req, res) {
+app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
