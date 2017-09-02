@@ -28,7 +28,7 @@ app.get('/test-db',function(req,res){
    }) ;
 });
 app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'evm.html'));
+  res.sendFile(path.join(__dirname, 'ui', 'Blood.html'));
 });
 app.get('/thankyou.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'thankyou.html'));
