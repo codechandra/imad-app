@@ -75,7 +75,7 @@ app.get('/recipent/:id',function(req,res){
        else
        {
           var data=[];
-          data=(result.rows);
+          data=(result.rows.toString());
           var i, item;
 for (i = 0; i < data.length; i++) {
     for (item in data[i]) {
