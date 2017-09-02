@@ -28,7 +28,7 @@ app.get('/test-db',function(req,res){
    }) ;
 });
 app.get('/', function (req, res) {
-  res.sendFile(path('Blood.html'));
+  res.sendFile(('Blood.html'));
   
 });
 
