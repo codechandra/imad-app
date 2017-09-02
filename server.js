@@ -56,7 +56,7 @@ app.get('/donor/:id',function(req,res){
        }
        else
        {
-           res.send('success');
+           res.send("<h1>SUCESS</h1>");
        }
    }) ;
     
@@ -75,7 +75,7 @@ app.get('/recipent/:id',function(req,res){
        else
        {
           
-           
+                 res.send(JSON.stringify(result.rows));   
        }
           
        
