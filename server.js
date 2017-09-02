@@ -75,9 +75,16 @@ app.get('/recipent/:id',function(req,res){
        else
        {
            var data=((result.rows));
-           res.send(data[0]);
-           res.send(data[1]);
+          var i=0,j=0;
+          for(i=0;i<data.length;i++)
+          {
+              for(j=0;j<data[i].length;j++)
+              {
+                  res.send(data[i][j]);
+              }
+              }
           }
+          
        
        
    }) ;
