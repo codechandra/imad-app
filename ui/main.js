@@ -13,7 +13,7 @@ function donate()
 
 function donor()
 {
-    var num=getElementById('number_recipent').value;
+    var num=document.getElementById('number_recipent').value;
     var s='/'+num;
     window.open(s.toString());
     
