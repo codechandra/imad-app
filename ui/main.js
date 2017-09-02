@@ -21,7 +21,7 @@ function donor()
    window.open(s);
     
 }
-function recipentr()
+function recipent()
 {
     var num=document.getElementById('number_recipent').value;
     var group=document.getElementById('recipent_group');
