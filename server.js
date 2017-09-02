@@ -44,19 +44,36 @@ app.get('/hash/:input', function (req, res) {
   res.send(hashedString);
 });
 
-app.get('/:id',function(req,res){
+app.get('/donor/:id',function(req,res){
     var value=req.params.id;
     var m=value.split('$');
     var one=(m[0]);
     var two=(m[1]);
     var three=m[2];
-    pool.query('INSERT INTO donor(mobile,bloodgroup,recipent_name) VALUES ($1,$2,$3)',[one,two,three],function(err,result){
+    pool.query('INSERT INTO donor(donor_mobile,donor_group,donor_name) VALUES ($1,$2,$3)',[one,two,three],function(err,result){
        if(err){
            res.status(500).send(err.toString());
        }
        else
        {
            res.send('success');
+       }
+   }) ;
+    
+});
+app.get('/recipent/:id',function(req,res){
+    var value=req.params.id;
+    var m=value.split('$');
+    var one=(m[0]);
+    var two=(m[1]);
+    var three=m[2];
+    pool.query('SELECT *FROM recipent WHERE recipent_group=($1) ',[two],function(err,result){
+       if(err){
+           res.status(500).send(err.toString());
+       }
+       else
+       {
+           res.send(JSON.stringify(result).rows);
        }
    }) ;
     
