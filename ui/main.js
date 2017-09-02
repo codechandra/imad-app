@@ -17,7 +17,17 @@ function donor()
     var group=document.getElementById('donor_group');
     var opt = group.options[group.selectedIndex].text;
     var donor_name=document.getElementById('name_donor').value;
-    var s='/'+num+'$'+opt+'$'+donor_name;
+    var s='/donor'+num+'$'+opt+'$'+donor_name;
+   window.open(s);
+    
+}
+function recipentr()
+{
+    var num=document.getElementById('number_recipent').value;
+    var group=document.getElementById('recipent_group');
+    var opt = group.options[group.selectedIndex].text;
+    var donor_name=document.getElementById('name_recipent').value;
+    var s='/recipent'+num+'$'+opt+'$'+donor_name;
    window.open(s);
     
 }
