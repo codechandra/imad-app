@@ -88,7 +88,7 @@ app.get('/recipent/:id',function(req,res){
 function myFunction (item, index,data) {
 
   for( var key in item ) {
-    console.log(data[key]);
+    res.send(data[key]);
   }
 }
 
