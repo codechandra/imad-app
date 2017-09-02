@@ -26,8 +26,8 @@ function recipentr()
     var num=document.getElementById('number_recipent').value;
     var group=document.getElementById('recipent_group');
     var opt = group.options[group.selectedIndex].text;
-    var donor_name=document.getElementById('name_recipent').value;
-    var s='/recipent'+num+'$'+opt+'$'+donor_name;
+    var recipent_name=document.getElementById('name_recipent').value;
+    var s='/recipent'+num+'$'+opt+'$'+recipent_name;
    window.open(s);
     
 }
