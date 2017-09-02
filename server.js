@@ -45,7 +45,17 @@ app.get('/hash/:input', function (req, res) {
 });
 
 app.get('/donor',function(req,res){
-    res.send('hai')
+    var num=getElementById('number_recipent').value;
+    pool.query('INSERT INTO donor(mobile) VALUES (num)',function(err,result){
+       if(err){
+           res.status(500).send(err.toString());
+       }
+       else
+       {
+           res.send('success');
+       }
+   }) ;
+    
 })
 
 app.get('/ui/style.css', function (req, res) {
