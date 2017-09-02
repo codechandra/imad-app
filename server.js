@@ -44,6 +44,9 @@ app.get('/hash/:input', function (req, res) {
   res.send(hashedString);
 });
 
+app.get('/donor',function(req,res){
+    res.send('hai')
+})
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
