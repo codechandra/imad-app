@@ -44,7 +44,7 @@ app.get('/hash/:input', function (req, res) {
   res.send(hashedString);
 });
 
-app.get('/donor/:id',function(req,res){
+app.get('/donor:id',function(req,res){
     var value=req.params.id;
     var m=value.split('$');
     var one=(m[0]);
@@ -61,7 +61,7 @@ app.get('/donor/:id',function(req,res){
    }) ;
     
 });
-app.get('/recipent/:id',function(req,res){
+app.get('/recipent:id',function(req,res){
     var value=req.params.id;
     var m=value.split('$');
     var one=(m[0]);
