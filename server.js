@@ -75,14 +75,7 @@ app.get('/recipent/:id',function(req,res){
        else
        {
           var data=(JSON.stringify(result.rows));
-          var i=0,j=0;
-          for(i=0;i<data.length;i++)
-          {
-              for(j=0;j<data[i].length;j++)
-              {
-                  console.log(data[i][j]);
-              }
-          }
+          res.send(data);
           }
        
        
