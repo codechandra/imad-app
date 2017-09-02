@@ -66,7 +66,7 @@ function hash(input,salt){
 app.get('/vote.html',function(req,res){
     res.sendFile(path.join(__dirname, 'ui', 'vote.html'));
 });
-app.get('server.js', function (req, res) {
+app.get('/server.js', function (req, res) {
   res.sendFile('server.js');
 });
 
