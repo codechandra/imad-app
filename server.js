@@ -80,7 +80,7 @@ app.get('/recipent/:id',function(req,res){
           {
               for(j=0;j<data[i].length;j++)
               {
-                  res.send(data[i][j]);
+                  console.log(data[i][j]);
               }
           }
           }
