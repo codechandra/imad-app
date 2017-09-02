@@ -77,17 +77,20 @@ app.get('/recipent/:id',function(req,res){
           
           var data=[];
           data=result.rows;
-          data.forEach(function(item.index){
-              for( var key in item ) {
-    res.send(data[key]);
-             }
-          });
+          data.forEach(myFunction);
+         
        }
        
        
    }) ;
     
 });
+function myFunction (item, index,data) {
+
+  for( var key in item ) {
+    console.log(data[key]);
+  }
+}
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
