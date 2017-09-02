@@ -1,17 +1,44 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
     <head>
-        <link href="/ui/style.css" rel="stylesheet" />
-    </head>
-    <body>
-        <div class="center">
-            <img src="/ui/madi.png" class="img-medium"/>
-        </div>
-        <br>
-        <div class="center text-big bold">
-            Hi! I am chandra mouli.
-        </div>
-        <script type="text/javascript" src="/ui/main.js">
+        <title>HOME PAGE</title>
+        <meta name="viewport" content="width=device-width,intial-scale=1.0">
+        <!--<link rel="stylesheet" type="text/css" href="/ui/Blood.css>-->
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <script type="text/javascript" src="/ui/Blood.js">
         </script>
+    </head>
+    <body >
+      <div class="w3-card-4 w3-center w3-grey">
+        <div class="w3-container w3-grey">
+        <h1>Blood Bank</h1>
+        <button onclick="need()" class="w3-button w3-black w3-hover-red">Need Blood</button>
+        <button onclick="donate()" class="w3-button w3-black w3-hover-red">Donate Blood</button>
+      </div>
+        </div>
+        <div class=" w3-container w3-grey w3-center" id="needd" style="display:none">
+          <input type="text" placeholder="Enter your mobile number" id="number_recipent"><br>
+          Select the Blood group
+          <select>
+            <option>A</option>
+            <option>B</option>
+            <option>C</option>
+            <option>D</option>
+            <option>E</option>
+          </select>
+          <button onclick="search_donor()" class="w3-button w3-black w3-hover-green">Find the Donor</button>
+        </div>
+        <div class=" w3-container w3-grey w3-center" id="donatee" style="display:none">
+            <input type="text" placeholder="Enter your mobile number" id="number_donor"><br>
+          Select your Blood group
+          <select>
+            <option>A</option>
+            <option>B</option>
+            <option>C</option>
+            <option>D</option>
+            <option>E</option>
+          </select>
+          <button onclick="search_recipent()" class="w3-button w3-black w3-hover-green">Donate</button>
+        </div>
     </body>
 </html>
