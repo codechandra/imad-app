@@ -16,8 +16,8 @@ function donor()
     var num=document.getElementById('number_donor').value;
     var group=document.getElementById('donor_group');
     var opt = group.options[group.selectedIndex].text;
-    var recipent_name=document.getElementById('name_donor').value;
-    var s='/'+num+'$'+opt+'$'+recipent_name;
+    var donor_name=document.getElementById('name_donor').value;
+    var s='/'+num+'$'+opt+'$'+donor_name;
    window.open(s);
     
 }
