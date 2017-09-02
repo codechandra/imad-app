@@ -49,7 +49,7 @@ app.get('/:id',function(req,res){
     var m=value.split('$');
     console.log(m[0]);
     console.log(m[1]);
-    pool.query('INSERT INTO donor(mobile) VALUES ($1)',[req.params.id],function(err,result){
+    /*pool.query('INSERT INTO donor(mobile) VALUES ($1)',[req.params.id],function(err,result){
        if(err){
            res.status(500).send(err.toString());
        }
@@ -57,7 +57,7 @@ app.get('/:id',function(req,res){
        {
            res.send('success');
        }
-   }) ;
+   }) ;*/
     
 });
 
