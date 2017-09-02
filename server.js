@@ -50,7 +50,7 @@ app.get('/:id',function(req,res){
     var one=(m[0]);
     var two=(m[1]);
     var three=m[2];
-    pool.query('INSERT INTO donor(mobile,bloodgroup,name) VALUES ($1,$2,$3)',[one,two,three],function(err,result){
+    pool.query('INSERT INTO donor(mobile,bloodgroup,recipent_name) VALUES ($1,$2,$3)',[one,two,three],function(err,result){
        if(err){
            res.status(500).send(err.toString());
        }
