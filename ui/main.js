@@ -17,8 +17,7 @@ function donor()
     var group=document.getElementById('hh');
     var opt = group.options[group.selectedIndex].text;
     window.alert(opt);
-    
-    var s='/'+num+opt;
+    var s='/'+num+'$'+opt;
    window.open(s);
     
 }
