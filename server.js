@@ -74,17 +74,14 @@ app.get('/recipent/:id',function(req,res){
        }
        else
        {
-           var data[];
-           data=((result.rows));
-          var i=0,j=0;
-          for(i=0;i<data.length;i++)
-          {
-              for(j=0;j<data[i].length;j++)
-              {
-                  res.send(data[i][j]);
-              }
-              }
-          }
+           var data=result.rows;
+           var r[];
+           var i=0;
+           for(i=0;i<data.length;i++)
+           {
+               r[i]=data[i].slice;
+           }
+       }
           
        
        
