@@ -52,7 +52,7 @@ app.get('/donor/:id',function(req,res){
     var three=m[2];
     pool.query('INSERT INTO donor(donor_mobile,donor_group,donor_name) VALUES ($1,$2,$3)',[one,two,three],function(err,result){
        if(err){
-           res.status(500).send(err.toString());
+           res.status(500).send(err.toString().trim());
        }
        else
        {
