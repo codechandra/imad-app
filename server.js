@@ -74,7 +74,8 @@ app.get('/recipent/:id',function(req,res){
        }
        else
        {
-           var data=((result.rows));
+           var data[];
+           data=((result.rows));
           var i=0,j=0;
           for(i=0;i<data.length;i++)
           {
