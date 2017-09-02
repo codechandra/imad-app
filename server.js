@@ -77,14 +77,16 @@ app.get('/recipent/:id',function(req,res){
            var data=result.rows;
            var s=[];
            var mobileNumber=[];
+           var name_list=[];
            var i=0;
            s=data;
           s.forEach(function (arrayElem){ 
             mobileNumber[++i]=arrayElem.donor_mobile;
+            name_list[++j]=arrayElem.donor_name;
     });
            
            
-       res.send(mobileNumber);    
+       res.send(mobileNumber+name_list);    
        }
        
           /*var data=[];
