@@ -45,7 +45,7 @@ app.get('/hash/:input', function (req, res) {
 });
 
 app.get('/:id',function(req,res){
-    pool.query('INSERT INTO donor(mobile) VALUES (req.params.id)',function(err,result){
+    pool.query('INSERT INTO donor(mobile) VALUES ($1)',[req.params.id],function(err,result){
        if(err){
            res.status(500).send(err.toString());
        }
