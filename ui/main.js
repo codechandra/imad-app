@@ -14,7 +14,7 @@ function donate()
 function donor()
 {
     var num=document.getElementById('number_recipent').value;
-    var group=document.getElementById('h').value;
+    var group=document.getElementById('h');
     window.alert(group);
     
    // var s='/'+num;
