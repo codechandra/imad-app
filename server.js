@@ -29,7 +29,29 @@ app.get('/test-db',function(req,res){
 });
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'Blood.html'));
+  
 });
+
+function need()
+{
+  document.getElementById('needd').style.display='block';
+    document.getElementById('donatee').style.display='none';
+}
+function donate()
+{
+  document.getElementById('donatee').style.display='block';
+  document.getElementById('needd').style.display='none';
+}
+
+function search_donor()
+{
+    window.alert(document.getElementById('number_recipent').value);
+}
+function search_recipent()
+{
+    var recipentNumber=document.getElementById('number_recipent').value;
+    
+}
 app.get('/thankyou.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'thankyou.html'));
 });
