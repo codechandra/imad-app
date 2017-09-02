@@ -14,7 +14,7 @@ var config={
     port:'5432',
     password:process.env.DB_PASSWORD
 };
-app.get('/render',function(req,res){
+app.get('/renderr',function(req,res){
     res.render('donor');
 });
 
