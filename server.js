@@ -74,7 +74,7 @@ app.get('/recipent/:id',function(req,res){
        }
        else
        {
-           res.send(JSON.stringify(result.rows.donor_name));
+           res.send(JSON.stringify(result.rows[0].donor_name));
        }
        
    }) ;
