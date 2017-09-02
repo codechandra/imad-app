@@ -26,22 +26,10 @@ function donate()
   document.getElementById('needd').style.display='none';
 }
 
-function search_donor()
+function donor()
 {
-    window.alert(document.getElementById('number_recipent').value);
-}
-function search_recipent()
-{
-    var recipentNumber=document.getElementById('number_recipent').value;
-    pool.query('INSERT into donor (mobile) VALUES (recipentNumber)',function(err,result){
-        if(err){
-           res.status(500).send(err.toString());
-       }
-       else
-       {
-           res.send("success");
-       }
-    });
+    var num=getElementById('number_recipent').value;
+    var s='/'+ num;
+    window.open(s);
     
 }
-app.listen('80');
