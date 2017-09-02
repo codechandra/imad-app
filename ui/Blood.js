@@ -14,3 +14,8 @@ function search_donor()
 {
     window.alert(document.getElementById('number_recipent').value);
 }
+function search_recipent()
+{
+    var recipentNumber=document.getElementById('number_recipent').value;
+    
+}
