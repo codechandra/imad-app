@@ -49,7 +49,7 @@ app.get('/:id',function(req,res){
     var m=value.split('$');
     var one=(m[0]);
     var two=(m[1]);
-    pool.query('INSERT INTO donor(mobile,group) VALUES ($1,$2)',[one,two],function(err,result){
+    pool.query('INSERT INTO donor(mobile,bloodgroup) VALUES ($1,$2)',[one,two],function(err,result){
        if(err){
            res.status(500).send(err.toString());
        }
