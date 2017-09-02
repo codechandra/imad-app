@@ -75,13 +75,14 @@ app.get('/recipent/:id',function(req,res){
        else
        {
           
-                 var data[];
-                 data=result.rows;
-                 data.forEach(function(arrayItem){
-                     res.send(arrayItem);
-                 });
+          var data=[];
+          data=result.rows;
+          data.forEach(function(item.index){
+              for( var key in item ) {
+    res.send(data[key]);
+             }
+          });
        }
-          
        
        
    }) ;
