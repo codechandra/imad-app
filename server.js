@@ -4,6 +4,7 @@ var path = require('path');
 var crypto = require('crypto');
 var app = express();
 var Pool=require('pg').Pool;
+app.set('view engine','ejs');
 
 app.use(morgan('combined'));
 var config={
@@ -74,7 +75,8 @@ app.get('/recipent/:id',function(req,res){
        }
        else
        {
-           var data=result.rows;
+           res.render('donor');
+          /* var data=result.rows;
            var s=[];
            var mobileNumber=[];
            var name_list=[];
@@ -86,7 +88,7 @@ app.get('/recipent/:id',function(req,res){
     });
            
            
-       res.send(mobileNumber+name_list);    
+       res.send(mobileNumber+name_list); */   
        }
        
           /*var data=[];
