@@ -80,7 +80,7 @@ app.get('/recipent/:id',function(req,res){
        }
        else
        {
-           res.render('donor');
+         
           /* var data=result.rows;
            var s=[];
            var mobileNumber=[];
