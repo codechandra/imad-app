@@ -90,12 +90,12 @@ app.get('/recipent/:id',function(req,res){
           s.forEach(function (arrayElem){ 
             mobileNumber[++i]=arrayElem.donor_mobile;
             name_list[++j]=arrayElem.donor_name;
-    });
+    });*/
            
-          
-       res.send(mobileNumber+name_list); */   
+          res.send("Here are the donor's list"+JSON.stringify(result));
+        
        }
-        res.send("Here are the donor's list"+JSON.stringify(result));
+        
           /*var data=[];
           data=(result.rows);
           var i, item;
