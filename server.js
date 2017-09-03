@@ -64,7 +64,7 @@ app.get('/donor/:id',function(req,res){
        {
             var value=req.params.id;
             var three=m[2];
-           res.send("<center><body style='background-color:green;margin-top:20%'><h1 >Thank you "+three+" for being kind we'll inform you in need  </h1></body></center>");
+           res.send("<center><body style='background-color:green;margin-top:20%'><h1 >Thank you "+three+" for being kind we'll inform you in need. </h1></body></center>");
        }
    }) ;
     
