@@ -28,6 +28,7 @@ function recipent()
     var opt = group.options[group.selectedIndex].text;
     var recipent_name=document.getElementById('name_recipent').value;
     var s='/recipent/'+num+'$'+opt+'$'+recipent_name;
-   window.open(s);
+   var d=window.open(s);
+   window.alert(d);
     
 }
