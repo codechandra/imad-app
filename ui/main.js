@@ -18,8 +18,8 @@ function donor()
     var opt = group.options[group.selectedIndex].text;
     var donor_name=document.getElementById('name_donor').value;
     var s='/donor/'+num+'$'+opt+'$'+donor_name;
-   window.open(s);
-    
+   var d=window.open(s);
+    window.alert(d);
 }
 function recipent()
 {
