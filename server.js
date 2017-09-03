@@ -95,6 +95,7 @@ app.get('/recipent/:id',function(req,res){
     });*/
            
           res.send("Here are the donor's list <br>"+JSON.stringify(result.rows));
+          
         
        }
         
