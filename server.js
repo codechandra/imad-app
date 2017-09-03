@@ -7,6 +7,7 @@ var Pool=require('pg').Pool;
 app.set('view engine','ejs');
 
 app.use(morgan('combined'));
+app.use('/views',express.static());
 var config={
     user:'codechandra',
     database:'codechandra',
@@ -15,7 +16,7 @@ var config={
     password:process.env.DB_PASSWORD
 };
 app.get('/renderr',function(req,res){
-    res.render('donor.ejs');
+    res.render('donor');
 });
 
 var pool=new Pool(config);
