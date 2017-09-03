@@ -99,7 +99,8 @@ app.get('/recipent/:id',function(req,res){
             
         }
         else
-          res.send("<body style='background-color:green'><h1 >Here is the list of donors+"+(JSON.stringify(result.rows))+"</h1></body>");
+        var data=JSON.stringify(result.rows);
+          res.send("<body ng-controller='CountryCtrl'><h2>Angular.js JSON Fetching Example</h2> <table><tr><th>Code</th><th>Country</th><th>Population</th></tr><tr ng-repeat='country in data '><td>{{data.donor_mobile}}</td><td>{{data.donor_name}}</td><td>{{data.donor_group}}</td></tr> </table></body>");
           
         
        }
