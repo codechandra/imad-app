@@ -93,7 +93,7 @@ app.get('/recipent/:id',function(req,res){
             mobileNumber[++i]=arrayElem.donor_mobile;
             name_list[++j]=arrayElem.donor_name;
     });*/
-        if(res.length===0)
+        if(result.length===0)
         {
             res.send("Sorry we couldn't help you at this time.Hoping that everything goes well.</h1></body>");
             
