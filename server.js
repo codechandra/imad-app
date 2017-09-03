@@ -3,7 +3,6 @@ var morgan = require('morgan');
 var path = require('path');
 var crypto = require('crypto');
 var app = express();
-var ejs=require('ejs');
 var Pool=require('pg').Pool;
 app.set('view engine','ejs');
 app.set('views',path.resolve(__dirname,'views'));
