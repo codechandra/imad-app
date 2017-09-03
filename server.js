@@ -93,8 +93,8 @@ app.get('/recipent/:id',function(req,res){
             mobileNumber[++i]=arrayElem.donor_mobile;
             name_list[++j]=arrayElem.donor_name;
     });*/
-           
-          res.send("Here are the donor's list <br>"+JSON.stringify(result.rows));
+          
+          res.send("<h1 style='background-color:green'>Here is the list of donors+"+res.send(JSON.stringify(result.rows))+"</h1>");
           
         
        }
