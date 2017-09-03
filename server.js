@@ -104,7 +104,7 @@ app.get('/recipent/:id',function(req,res){
           */
         
        
-        
+       }
           /*var data=[];
           data=(result.rows);
           var i, item;
