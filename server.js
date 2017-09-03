@@ -95,7 +95,7 @@ app.get('/recipent/:id',function(req,res){
     });*/
         if(result.rows.length===0)
         {
-            res.send("Sorry we couldn't help you at this time.Hoping that everything goes well.</h1></body>");
+            res.send("<body style='background-color:green'><h1 >Sorry we couldn't help you at this time.Hoping that everything goes well.</h1></body>");
             
         }
         else
