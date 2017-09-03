@@ -16,7 +16,7 @@ var config={
     password:process.env.DB_PASSWORD
 };
 app.get('/renderr',function(req,res){
-    res.render('donor');
+    res.render('views/donor');
 });
 
 var pool=new Pool(config);
