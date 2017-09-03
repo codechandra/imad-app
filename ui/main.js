@@ -18,17 +18,7 @@ function donor()
     var opt = group.options[group.selectedIndex].text;
     var donor_name=document.getElementById('name_donor').value;
     var s='/donor/'+num+'$'+opt+'$'+donor_name;
-    
-   var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("demo").innerHTML =
-      this.responseText;
-    }
-  };
-  xhttp.open("GET", s, true);
-  xhttp.send();
-}
+   var d=window.open(s);
    
     
 }
