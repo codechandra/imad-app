@@ -92,7 +92,7 @@ app.get('/recipent/:id',function(req,res){
             name_list[++j]=arrayElem.donor_name;
     });*/
            
-          res.send("Here are the donor's list"+JSON.stringify(result));
+          res.send("Here are the donor's list"+JSON.stringify(result.rows));
         
        }
         
