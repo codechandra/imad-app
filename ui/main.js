@@ -19,7 +19,7 @@ function donor()
     var donor_name=document.getElementById('name_donor').value;
     var s='/donor/'+num+'$'+opt+'$'+donor_name;
    var d=window.open(s);
-    window.alert(typeof(d));
+    
 }
 function recipent()
 {
@@ -29,6 +29,6 @@ function recipent()
     var recipent_name=document.getElementById('name_recipent').value;
     var s='/recipent/'+num+'$'+opt+'$'+recipent_name;
    var d=window.open(s);
-   window.alert(typeof(d));
+   
     
 }
