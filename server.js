@@ -5,6 +5,7 @@ var crypto = require('crypto');
 var app = express();
 var Pool=require('pg').Pool;
 app.set('view engine','ejs');
+app.set('views',path.resolve(__dirname,'views'));
 
 app.use(morgan('combined'));
 //app.use('/views/ui',express.static());
@@ -16,7 +17,7 @@ var config={
     password:process.env.DB_PASSWORD
 };
 app.get('/renderr',function(req,res){
-    res.render('views/donor');
+    res.render('donor');
 });
 
 var pool=new Pool(config);
