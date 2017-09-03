@@ -98,7 +98,7 @@ app.get('/recipent/:id',function(req,res){
             res.send("Sorry we couldn't help you at this time.Hoping that everything goes well.</h1></body>");
             
         }
-          
+        else
           res.send("<body style='background-color:green'><h1 >Here is the list of donors+"+(JSON.stringify(result.rows))+"</h1></body>");
           
         
