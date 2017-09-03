@@ -62,7 +62,7 @@ app.get('/donor/:id',function(req,res){
        }
        else
        {
-           res.send("<h1>Thank you for being kind we'll inform you in need  </h1>");
+           res.send("<body style='background-color:black'><h1 >Thank you for being kind we'll inform you in need  </h1></body>");
        }
    }) ;
     
