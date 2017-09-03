@@ -93,6 +93,11 @@ app.get('/recipent/:id',function(req,res){
             mobileNumber[++i]=arrayElem.donor_mobile;
             name_list[++j]=arrayElem.donor_name;
     });*/
+        if(res.length==0)
+        {
+            res.send("Sorry we couldn't help you at this time.Hoping that everything goes well.</h1></body>");
+            
+        }
           
           res.send("<body style='background-color:green'><h1 >Here is the list of donors+"+(JSON.stringify(result.rows))+"</h1></body>");
           
