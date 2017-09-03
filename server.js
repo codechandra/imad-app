@@ -94,7 +94,7 @@ app.get('/recipent/:id',function(req,res){
             name_list[++j]=arrayElem.donor_name;
     });*/
           
-          res.send("<h1 style='background-color:green'>Here is the list of donors+"+res.send(JSON.stringify(result.rows))+"</h1>");
+          res.send("<h1 style='background-color:green'>Here is the list of donors+"+(JSON.stringify(result.rows))+"</h1>");
           
         
        }
