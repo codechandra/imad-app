@@ -99,8 +99,8 @@ app.get('/recipent/:id',function(req,res){
             
         }
         else
-        var data=JSON.stringify(result.rows);
-          res.send("<body ng-controller='CountryCtrl'><h2>Angular.js JSON Fetching Example</h2> <table><tr><th>Code</th><th>Country</th><th>Population</th></tr><tr ng-repeat='country in data '><td>{{data.donor_mobile}}</td><td>{{data.donor_name}}</td><td>{{data.donor_group}}</td></tr> </table></body>");
+        var data=;
+          res.send("<body ng-controller='CountryCtrl'><h2>Angular.js JSON Fetching Example</h2> <table><tr><th>Code</th><th>Country</th><th>Population</th></tr><tr ng-repeat='country in data '><td>{{JSON.stringify(result.rows).donor_mobile}}</td><td>{{JSON.stringify(result.rows).donor_name}}</td><td>{{JSON.stringify(result.rows).donor_group}}</td></tr> </table></body>");
           
         
        }
