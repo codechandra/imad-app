@@ -7,7 +7,7 @@ var Pool=require('pg').Pool;
 app.set('view engine','ejs');
 
 app.use(morgan('combined'));
-app.use('/views',express.static());
+app.use('/views/ui',express.static());
 var config={
     user:'codechandra',
     database:'codechandra',
