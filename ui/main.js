@@ -24,7 +24,7 @@ function donor()
       document.getElementById("demo").innerHTML = this.responseText;
     }
   };
-  xhttp.open("GET", "/donor", true);
+  xhttp.open("GET", "/d", true);
   xhttp.send();
    
     
