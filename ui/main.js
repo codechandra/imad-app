@@ -47,26 +47,24 @@ function recipent()
     document.getElementById("main").style.display = 'none';
    // document.getElementById("demo").innerHTML = d;
    
-    var i=0,k=1;
+    var i=0,k=1,j=2;
     /*for(i=0;i<d.length;i++){
         alert(d[i]["donor_mobile"]);
     }*/
     for(i=0;i<d.length;i++)
-    {
-        if(k%2!==0)
-        {
-         document.getElementById(k).innerHTML = d[k]["donor_name"];
-        }else
-        {
-         document.getElementById(k).innerHTML = d[k]["donor_mobile"];
+    {    k=(2*k)+1;
+         document.getElementById(k).innerHTML = d[i]["donor_name"];
+         
+         document.getElementById(k).innerHTML = d[i]["donor_mobile"];
+         j=(2+j);
+         
         }
-        k++;
         // alert(d[i]["donor_name"]);
         // alert(d[i]["donor_mobile"]);
     
      
     }
-  }
+  };
   }
   xhttp.open("GET", s, true);
   xhttp.send();
