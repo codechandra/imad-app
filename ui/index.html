@@ -53,8 +53,13 @@
           <button onclick="donor()" class="w3-button w3-black w3-hover-green">Donate</button>
         </div>
         </div>
-        <div id="demo" class="w3-container">
-          
+        <div ng-app="myApp" ng-controller="customersCtrl" id="demo" class="w3-container">
+          <table>
+  <tr ng-repeat="x in names">
+    <td>{{ x.donor_mobile }}</td>
+    <td>{{ x.donor_name }}</td>
+  </tr>
+</table>
             <!--<h3>Made with <i class="fa fa-heart" aria-hidden="true"></i> by chandra mouli</h3>-->
             <h1></h1>
         </div>
