@@ -46,10 +46,11 @@ function recipent()
         d=JSON.parse(this.responseText);
     document.getElementById("main").style.display = 'none';
     var i=0;
-    for(i=0;i<d.length;i++){
+    /*for(i=0;i<d.length;i++){
         alert(d[i]["donor_mobile"]);
-    }
-    //  document.getElementById("demo").innerHTML = d[1]["donor_mobile"];
+    }*/
+    var f="demo";
+      document.getElementById(f).innerHTML = d[1]["donor_mobile"];
     }
   };
   xhttp.open("GET", s, true);
