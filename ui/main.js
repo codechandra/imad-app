@@ -55,10 +55,10 @@ function recipent()
     {
         if(k%2!==0)
         {
-         document.getElementById(k).innerHTML = d[i]["donor_name"];
+         document.getElementById(k).innerHTML = d[k]["donor_name"];
         }else
         {
-         document.getElementById(k).innerHTML = d[i]["donor_mobile"];
+         document.getElementById(k).innerHTML = d[k]["donor_mobile"];
         }
         k++;
         // alert(d[i]["donor_name"]);
