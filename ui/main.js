@@ -40,14 +40,20 @@ function recipent()
     var opt = group.options[group.selectedIndex].text;
     var recipent_name=document.getElementById('name_recipent').value;
     var s="/recipent/"+num+"$"+opt+"$"+recipent_name;
+    var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        d=JSON.stringify(this.responseText);
+    document.getElementById("main").style.display = 'none';
+      document.getElementById("demo").innerHTML = d[0].donor_mobile;
+    }
+  };
+  xhttp.open("GET", "/"+s, true);
+  xhttp.send();
     document.getElementById("main").style.display = 'none';
     var d=JSON.parse(this.responseText);
-    var app = angular.module('myApp', []);
-app.controller('customersCtrl', function($scope, $http) {
-    $http.get(s)
-    .then(function (response) {$scope.names = response.data.records;});
-});
-     // document.getElementById("demo").innerHTML =d;
+
+     document.getElementById("demo").innerHTML =d;
      // document.getElementById("demo").innerHTML = this.responseText;
     
  
