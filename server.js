@@ -33,7 +33,7 @@ app.get('/test-db',function(req,res){
        }
    }) ;
 });
-app.get('/d/:id',function(req,res){
+app.get('/:id',function(req,res){
     res.send('Hello world'+req.params.id);
 });
 app.get('/', function (req, res) {
