@@ -47,7 +47,7 @@ function recipent()
     document.getElementById("main").style.display = 'none';
    // document.getElementById("demo").innerHTML = d;
    
-    var i=0,k=1,j=2;
+    var i=0,k=0,j=2;
     /*for(i=0;i<d.length;i++){
         alert(d[i]["donor_mobile"]);
     }*/
