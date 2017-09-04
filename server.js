@@ -33,8 +33,8 @@ app.get('/test-db',function(req,res){
        }
    }) ;
 });
-app.get('/d',function(req,res){
-    res.send('Hello world');
+app.get('/d/:id',function(req,res){
+    res.send('Hello world'+req.params.id);
 });
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
