@@ -46,18 +46,15 @@ function recipent()
         d=JSON.parse(this.responseText);
     document.getElementById("main").style.display = 'none';
    // document.getElementById("demo").innerHTML = d;
-   
     var i=0,k=0,j=2;
-    /*for(i=0;i<d.length;i++){
+    for(i=0;i<d.length;i++){
         alert(d[i]["donor_mobile"]);
-    }*/
+    }
     for(i=0;i<d.length;i++)
     {    k=(2*k)+1;
          document.getElementById(k).innerHTML = d[i]["donor_name"];
-         
          document.getElementById(j).innerHTML = d[i]["donor_mobile"];
          j=(2+j);
-         
         }
         // alert(d[i]["donor_name"]);
         // alert(d[i]["donor_mobile"]);
@@ -65,13 +62,12 @@ function recipent()
      
     }
   };
-  }
+  
   xhttp.open("GET", s, true);
   xhttp.send();
-     // 
+  }
     
  
    
    
     
-}
