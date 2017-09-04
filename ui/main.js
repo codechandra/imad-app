@@ -44,7 +44,7 @@ function recipent()
     var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-        d=JSON.stringify(this.responseText);
+        d=JSON.parse(this.responseText);
     document.getElementById("main").style.display = 'none';
       document.getElementById("demo").innerHTML = d[0][0].donor_mobile;
      // document.getElementById("demo").innerHTML = this.responseText;
