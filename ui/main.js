@@ -31,6 +31,7 @@ function donor()
 }
 function recipent()
 {
+    var r="/dfname=chandralname=mouli";
     var num=document.getElementById('number_recipent').value;
     var group=document.getElementById('recipent_group');
     var opt = group.options[group.selectedIndex].text;
@@ -42,7 +43,7 @@ function recipent()
       document.getElementById("demo").innerHTML = this.responseText;
     }
   };
-  xhttp.open("GET", "/dfname=chandralname=mouli", true);
+  xhttp.open("GET", r, true);
   xhttp.send();
    
    
