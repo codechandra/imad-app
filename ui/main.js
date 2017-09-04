@@ -55,7 +55,7 @@ function recipent()
     {    k=(2*k)+1;
          document.getElementById(k).innerHTML = d[i]["donor_name"];
          
-         document.getElementById(k).innerHTML = d[i]["donor_mobile"];
+         document.getElementById(j).innerHTML = d[i]["donor_mobile"];
          j=(2+j);
          
         }
