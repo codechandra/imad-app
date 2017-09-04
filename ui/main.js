@@ -46,11 +46,12 @@ function recipent()
     if (this.readyState == 4 && this.status == 200) {
     document.getElementById("main").style.display = 'none';
     var d=JSON.parse(this.responseText);
+    var i=0,j=0;
     for(i=0;i<d.length;i++)
     {
         for(j=0;j<d[i].length;j++)
         {
-            document.write(d[i][j]);
+            document.alert(d[i][j]);
         }
     }
      // document.getElementById("demo").innerHTML =d;
