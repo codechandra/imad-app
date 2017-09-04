@@ -46,7 +46,7 @@ function recipent()
     if (this.readyState == 4 && this.status == 200) {
         d=JSON.stringify(this.responseText);
     document.getElementById("main").style.display = 'none';
-      document.getElementById("demo").innerHTML = d;
+      document.getElementById("demo").innerHTML = d[0][0];
      // document.getElementById("demo").innerHTML = this.responseText;
     }
   };
