@@ -53,8 +53,10 @@ function recipent()
     for(i=0;i<d.length;i++)
     {    k=(2*k)+1;
          document.getElementById(k).innerHTML = d[i]["donor_name"];
+         alert(k);
          document.getElementById(j).innerHTML = d[i]["donor_mobile"];
          j=(2+j);
+         alert(j);
         }
         // alert(d[i]["donor_name"]);
         // alert(d[i]["donor_mobile"]);
