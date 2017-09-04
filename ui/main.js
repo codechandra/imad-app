@@ -31,12 +31,13 @@ function donor()
 }
 function recipent()
 {
-    var r="/dfname=chandralname=mouli";
+   
     var num=document.getElementById('number_recipent').value;
     var group=document.getElementById('recipent_group');
     var opt = group.options[group.selectedIndex].text;
     var recipent_name=document.getElementById('name_recipent').value;
     var s='/recipent/'+num+'$'+opt+'$'+recipent_name;
+     var r="/"+num+opt+recipent_name;
     var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
