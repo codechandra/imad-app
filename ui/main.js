@@ -46,7 +46,7 @@ function recipent()
     if (this.readyState == 4 && this.status == 200) {
     document.getElementById("main").style.display = 'none';
     var d=JSON.parse(this.responseText);
-      document.getElementById("demo").innerHTML = d[0][0];
+      document.getElementById("demo").innerHTML ="";
      // document.getElementById("demo").innerHTML = this.responseText;
     }
   };
