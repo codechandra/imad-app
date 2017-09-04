@@ -43,18 +43,21 @@ function recipent()
     var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-        d=JSON.stringify(this.responseText);
+        d=JSON.parse(this.responseText);
     document.getElementById("main").style.display = 'none';
-    document.getElementById("demo").innerHTML = d;
+   // document.getElementById("demo").innerHTML = d;
+   
     var i=0;
     /*for(i=0;i<d.length;i++){
         alert(d[i]["donor_mobile"]);
     }*/
-    /*for(i=0;i<d.length;i++)
+    for(i=0;i<d.length;i++)
     {
-         document.getElementById(i+1).innerHTML = d[i]["donor_name"];
-         document.getElementById(i+2).innerHTML = d[i]["donor_mobile"];
-    }*/
+        // document.getElementById(i+1).innerHTML = d[i]["donor_name"];
+         //document.getElementById(i+2).innerHTML = d[i]["donor_mobile"];
+         alert(d[i]["donor_name"]);
+         alert(d[i]["donor_mobile"]);
+    
      
     }
   };
