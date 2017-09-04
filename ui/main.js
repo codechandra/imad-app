@@ -13,6 +13,7 @@ function donate()
 
 function donor()
 {
+    var d;
     var num=document.getElementById('number_donor').value;
     var group=document.getElementById('donor_group');
     var opt = group.options[group.selectedIndex].text;
@@ -21,7 +22,8 @@ function donor()
     var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("demo").innerHTML = this.responseText;
+        d=JSON.stringify(this.responseText);
+      document.getElementById("demo").innerHTML = d[0];
     }
   };
   xhttp.open("GET", "/"+s, true);
