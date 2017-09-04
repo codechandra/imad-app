@@ -24,7 +24,7 @@ function donor()
       document.getElementById("demo").innerHTML = this.responseText;
     }
   };
-  xhttp.open("GET", "s", true);
+  xhttp.open("GET", "/donor/+num+$+opt+$+donor_name", true);
   xhttp.send();
    
     
@@ -42,7 +42,7 @@ function recipent()
       document.getElementById("demo").innerHTML = this.responseText;
     }
   };
-  xhttp.open("GET", "s", true);
+  xhttp.open("GET", "/recipent/+num+$+opt+$+recipent_name", true);
   xhttp.send();
    
    
