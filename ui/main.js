@@ -51,7 +51,7 @@ function recipent()
     {
         for(j=0;j<d[i].length;j++)
         {
-            document.alert(d[i][j]);
+             document.getElementById("demo").innerHTML =d[i][j];
         }
     }
      // document.getElementById("demo").innerHTML =d;
