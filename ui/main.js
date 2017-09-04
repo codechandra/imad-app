@@ -42,7 +42,7 @@ function recipent()
       document.getElementById("demo").innerHTML = this.responseText;
     }
   };
-  xhttp.open("GET", "/d?fname=chandra?lname=mouli", true);
+  xhttp.open("GET", "/dfname=chandralname=mouli", true);
   xhttp.send();
    
    
