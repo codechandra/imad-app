@@ -49,8 +49,12 @@ function recipent()
     /*for(i=0;i<d.length;i++){
         alert(d[i]["donor_mobile"]);
     }*/
-    var f="demo";
-      document.getElementById(f).innerHTML = d[1]["donor_mobile"];
+    for(i=0;i<d.length;i++)
+    {
+         document.getElementById(i+1).innerHTML = d[i]["donor_name"];
+         document.getElementById(i+2).innerHTML = d[i]["donor_mobile"];
+    }
+     
     }
   };
   xhttp.open("GET", s, true);
