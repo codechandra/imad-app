@@ -48,7 +48,7 @@ function recipent()
       document.getElementById("demo").innerHTML = d;
     }
   };
-  xhttp.open("GET", "/"+s, true);
+  xhttp.open("GET", s, true);
   xhttp.send();
      // document.getElementById("demo").innerHTML = this.responseText;
     
