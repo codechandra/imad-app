@@ -56,7 +56,6 @@ function recipent()
          alert(k);
          document.getElementById(j).innerHTML = d[i]["donor_mobile"];
          j=(2+j);
-         alert(j);
         }
         // alert(d[i]["donor_name"]);
         // alert(d[i]["donor_mobile"]);
