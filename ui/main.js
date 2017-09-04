@@ -44,9 +44,8 @@ function recipent()
     var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-        d=JSON.stringify(this.responseText);
     document.getElementById("main").style.display = 'none';
-      document.getElementById("demo").innerHTML = d;
+      document.getElementById("demo").innerHTML = typeof(this.responseText);
      // document.getElementById("demo").innerHTML = this.responseText;
     }
   };
