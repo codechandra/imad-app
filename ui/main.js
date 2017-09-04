@@ -40,26 +40,17 @@ function recipent()
     var opt = group.options[group.selectedIndex].text;
     var recipent_name=document.getElementById('name_recipent').value;
     var s="/recipent/"+num+"$"+opt+"$"+recipent_name;
-     
-    var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
     document.getElementById("main").style.display = 'none';
     var d=JSON.parse(this.responseText);
-    var i=0,j=0;
-    for(i=0;i<d.length;i++)
-    {
-        for(j=0;j<d[i].length;j++)
-        {
-             document.getElementById("demo").innerHTML =d[i][j];
-        }
-    }
+    var app = angular.module('myApp', []);
+app.controller('customersCtrl', function($scope, $http) {
+    $http.get(s)
+    .then(function (response) {$scope.names = response.data.records;});
+});
      // document.getElementById("demo").innerHTML =d;
      // document.getElementById("demo").innerHTML = this.responseText;
-    }
-  };
-  xhttp.open("GET", s, true);
-  xhttp.send();
+    
+ 
    
    
     
