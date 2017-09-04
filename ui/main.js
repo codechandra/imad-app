@@ -17,14 +17,14 @@ function donor()
     var group=document.getElementById('donor_group');
     var opt = group.options[group.selectedIndex].text;
     var donor_name=document.getElementById('name_donor').value;
-    var s='/donor/'+num+'$'+opt+'$'+donor_name;
+    var s='donor/'+num+'$'+opt+'$'+donor_name;
     var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
       document.getElementById("demo").innerHTML = this.responseText;
     }
   };
-  xhttp.open("GET", "'/donor/'+num+'$'+opt+'$'+donor_name", true);
+  xhttp.open("GET", "/"+s, true);
   xhttp.send();
    
     
@@ -42,7 +42,7 @@ function recipent()
       document.getElementById("demo").innerHTML = this.responseText;
     }
   };
-  xhttp.open("GET", "'/recipent/'+num+'$'+opt+'$'+recipent_name", true);
+  xhttp.open("GET", "/"+s, true);
   xhttp.send();
    
    
