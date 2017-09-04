@@ -45,7 +45,7 @@ function recipent()
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
     document.getElementById("main").style.display = 'none';
-      document.getElementById("demo").innerHTML = typeof(this.responseText);
+      document.getElementById("demo").innerHTML = typeof(JSON.parse(this.responseText));
      // document.getElementById("demo").innerHTML = this.responseText;
     }
   };
