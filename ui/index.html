@@ -58,8 +58,11 @@ function recipent()
      f=JSON.stringify(this.responseText);
 //    document.getElementById("demo").innerHTML = d;
  var app = angular.module("myApp", []);
-app.controller("myCtrl", function($scope) {
-    $scope.firstName = f;
+app.directive("w3", function() {
+    return {
+        template : "I was made in a directive constructor!"
+    };
+});
  
     }
   };
@@ -117,7 +120,7 @@ app.controller("myCtrl", function($scope) {
           <button onclick="donor()" class="w3-button w3-black w3-hover-green">Donate</button>
         </div>
         </div>
-        <div ng-app="myApp" ng-controller="myCtrl"  class="w3-container">
+        <div ng-app="myApp" w3  class="w3-container">
            <h1>{{firstName}}</h1> 
             
         </div>
