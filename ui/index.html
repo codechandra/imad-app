@@ -56,6 +56,12 @@ function recipent()
    // document.getElementById("main").style.display = 'none';
     //var d=JSON.parse(this.responseText);
 //    document.getElementById("demo").innerHTML = d;
+ var app = angular.module("myApp", []);
+
+app.controller("myCtrl", function($scope) {
+    $scope.firstName = "John";
+    $scope.lastName = "Doe";
+});
     
     }
   };
@@ -63,12 +69,7 @@ function recipent()
   xhttp.open("GET", s, true);
   xhttp.send();
   }
-  var app = angular.module("myApp", []);
-
-app.controller("myCtrl", function($scope) {
-    $scope.firstName = "John";
-    $scope.lastName = "Doe";
-});
+ 
         </script>
     </head>
     <body class=" w3-center " style="margin-top:10%;margin-left:30%;margin-right:30%;background-color:" >
