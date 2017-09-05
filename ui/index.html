@@ -57,19 +57,20 @@ function recipent()
    // document.getElementById("main").style.display = 'none';
      f=JSON.stringify(this.responseText);
 //    document.getElementById("demo").innerHTML = d;
+ var app = angular.module("myApp", []);
+app.controller('myCtrl', function($scope) {
+    $scope.name = "John Doe";
+});
  
-
     }
   };
   
   xhttp.open("GET", s, true);
   xhttp.send();
   }
-  var app = angular.module("myApp", []);
+var app = angular.module('myApp', []);
 app.controller('myCtrl', function($scope) {
     $scope.name = "John Doe";
-});
- 
 });
  
         </script>
