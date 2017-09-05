@@ -58,7 +58,7 @@ function recipent()
      f=JSON.stringify(this.responseText);
 //    document.getElementById("demo").innerHTML = d;
  var app = angular.module("myApp", []);
-app.directive("w3", function() {
+app.directive("w3TestDirective", function() {
     return {
         template : "I was made in a directive constructor!"
     };
@@ -120,7 +120,7 @@ app.directive("w3", function() {
           <button onclick="donor()" class="w3-button w3-black w3-hover-green">Donate</button>
         </div>
         </div>
-        <div ng-app="myApp" w3  class="w3-container">
+        <div ng-app="myApp" w3-test-directive  class="w3-container">
           
             
         </div>
