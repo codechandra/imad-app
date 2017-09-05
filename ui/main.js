@@ -49,7 +49,7 @@ function recipent()
 //    document.getElementById("demo").innerHTML = d;
 var app = angular.module("myApp", []);
 app.controller("myCtrl", function($scope) {
-    $scope.data="myname";
+    $scope.d="myname";
 });
     }
   };
