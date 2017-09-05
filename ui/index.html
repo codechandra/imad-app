@@ -73,10 +73,10 @@ app.controller('myCtrl', function($scope) {
 });*/
 var app = angular.module('myApp', []);
 app.controller('myCtrl', function($scope, $http) {
-    $http.get(s)
+    $http.get("/hai")
     .then(function(response) {
        // $scope.myWelcome = response.data;
-       alert("hai");
+       alert(response.data);
     });
 });
  
