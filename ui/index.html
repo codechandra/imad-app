@@ -10,6 +10,16 @@
         </script>
     </head>
     <body class=" w3-center " style="margin-top:10%;margin-left:30%;margin-right:30%;background-color:" >
+        <script>
+
+var app = angular.module("myApp", []);
+
+app.controller("myCtrl", function($scope) {
+    $scope.firstName = "John";
+    $scope.lastName = "Doe";
+});
+
+</script>
         <div id="main" class="w3-card-4 ">
       <div class=" " >
         <div class=" w3-centerw3-container ">
@@ -54,7 +64,7 @@
         </div>
         </div>
         <div ng-app="myApp" ng-controller="myCtrl" id="demo" class="w3-container">
-           <h1>{{d}}</h1> 
+           <h1>{{firstname}}</h1> 
             
         </div>
     </body>
