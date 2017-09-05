@@ -47,6 +47,12 @@ function recipent()
     document.getElementById("main").style.display = 'none';
     var d=JSON.parse(this.responseText);
     document.getElementById("demo").innerHTML = d;
+var app = angular.module("myApp", []);
+app.controller("myCtrl", function($scope) {
+    $scope.data="my name";
+});
+
+
     
      
     }
