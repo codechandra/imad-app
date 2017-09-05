@@ -55,7 +55,8 @@ function recipent()
     if (this.readyState == 4 && this.status == 200) {
        // d=JSON.parse(this.responseText);
    // document.getElementById("main").style.display = 'none';
-    var d=JSON.stringify(this.responseText);
+     d=JSON.stringify(this.responseText);
+     call("d");
 //    document.getElementById("demo").innerHTML = d;
  
     }
@@ -64,11 +65,12 @@ function recipent()
   xhttp.open("GET", s, true);
   xhttp.send();
   }
+  function call(s){
   var app = angular.module("myApp", []);
-
 app.controller("myCtrl", function($scope) {
-    $scope.firstName = d;
+    $scope.firstName = s;
 });
+}
  
         </script>
     </head>
