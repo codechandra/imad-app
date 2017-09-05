@@ -45,7 +45,7 @@ function recipent()
     if (this.readyState == 4 && this.status == 200) {
        // d=JSON.parse(this.responseText);
     document.getElementById("main").style.display = 'none';
-    document.getElementById("demo").innerHTML = this.responseText;
+    document.getElementById("demo").innerHTML = typeof(this.responseText);
     
      
     }
