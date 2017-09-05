@@ -36,9 +36,6 @@ app.get('/test-db',function(req,res){
        }
    }) ;
 });
-app.get('/:id',function(req,res){
-    res.send('Hello world'+req.params.id);
-});
 app.get('/hai', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
