@@ -54,10 +54,10 @@ function recipent()
   xhttp.open("GET", s, true);
   xhttp.send();
   }
-  function call(s){
+  function call(r){
       var app = angular.module("myApp", []);
 app.controller("myCtrl", function($scope) {
-    $scope.d=s;
+    $scope.d=r;
 });
   }
     
