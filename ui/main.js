@@ -47,15 +47,18 @@ function recipent()
    // document.getElementById("main").style.display = 'none';
     //var d=JSON.parse(this.responseText);
 //    document.getElementById("demo").innerHTML = d;
-var app = angular.module("myApp", []);
-app.controller("myCtrl", function($scope) {
-    $scope.d="myname";
-});
+        call("mouli");
     }
   };
   
   xhttp.open("GET", s, true);
   xhttp.send();
+  }
+  function call(s){
+      var app = angular.module("myApp", []);
+app.controller("myCtrl", function($scope) {
+    $scope.d=s;
+});
   }
     
  
