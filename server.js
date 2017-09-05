@@ -19,7 +19,7 @@ var config={
 app.get('/renderr',function(req,res){
     res.render('donor',{title:'mouli'});
 });
-app.get('/hai',function(req,res){
+app.get('/haiii',function(req,res){
     res.send("hello");
 });
 
