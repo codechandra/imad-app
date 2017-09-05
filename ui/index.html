@@ -6,20 +6,73 @@
         <meta name="viewport" content="width=device-width,intial-scale=1.0">
         <!--<link rel="stylesheet" type="text/css" href="/ui/Blood.css>-->
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <script type="text/javascript" src="/ui/main.js">
-        </script>
-    </head>
-    <body class=" w3-center " style="margin-top:10%;margin-left:30%;margin-right:30%;background-color:" >
-        <script>
+        <script type="text/javascript">
+        
 
-var app = angular.module("myApp", []);
+function need()
+{
+  document.getElementById('needd').style.display='block';
+    document.getElementById('donatee').style.display='none';
+}
+function donate()
+{
+  document.getElementById('donatee').style.display='block';
+  document.getElementById('needd').style.display='none';
+}
+
+function donor()
+{
+    var d;
+    var num=document.getElementById('number_donor').value;
+    var group=document.getElementById('donor_group');
+    var opt = group.options[group.selectedIndex].text;
+    var donor_name=document.getElementById('name_donor').value;
+    var s='donor/'+num+'$'+opt+'$'+donor_name;
+    var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        d=JSON.stringify(this.responseText);
+    document.getElementById("main").style.display = 'none';
+      document.getElementById("demo").innerHTML = d[0].donor_mobile;
+    }
+  };
+  xhttp.open("GET", "/"+s, true);
+  xhttp.send();
+   
+    
+}
+function recipent()
+{
+   
+    var num=document.getElementById('number_recipent').value;
+    var group=document.getElementById('recipent_group');
+    var opt = group.options[group.selectedIndex].text;
+    var recipent_name=document.getElementById('name_recipent').value;
+    var s="/recipent/"+num+"$"+opt+"$"+recipent_name;
+    var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+       // d=JSON.parse(this.responseText);
+   // document.getElementById("main").style.display = 'none';
+    //var d=JSON.parse(this.responseText);
+//    document.getElementById("demo").innerHTML = d;
+    
+    }
+  };
+  
+  xhttp.open("GET", s, true);
+  xhttp.send();
+  }
+  var app = angular.module("myApp", []);
 
 app.controller("myCtrl", function($scope) {
     $scope.firstName = "John";
     $scope.lastName = "Doe";
 });
+        </script>
+    </head>
+    <body class=" w3-center " style="margin-top:10%;margin-left:30%;margin-right:30%;background-color:" >
 
-</script>
         <div id="main" class="w3-card-4 ">
       <div class=" " >
         <div class=" w3-centerw3-container ">
@@ -64,7 +117,7 @@ app.controller("myCtrl", function($scope) {
         </div>
         </div>
         <div ng-app="myApp" ng-controller="myCtrl"  class="w3-container">
-           <h1>{{firstname}}</h1> 
+           <h1>{{firstName}}</h1> 
             
         </div>
     </body>
