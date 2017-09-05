@@ -71,8 +71,10 @@ app.controller('myCtrl', function($scope) {
     $scope.name = f;
     alert(f);
 });*/
-var f="h"
-var d=f+"a"+"i";
+var f="h";
+var g="a";
+var c="i";
+var d=f+g+c;
 var app = angular.module('myApp', []);
 app.controller('myCtrl', function($scope, $http) {
     $http.get("/"+d)
