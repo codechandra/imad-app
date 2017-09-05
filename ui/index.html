@@ -49,7 +49,7 @@ function recipent()
     var group=document.getElementById('recipent_group');
     var opt = group.options[group.selectedIndex].text;
     var recipent_name=document.getElementById('name_recipent').value;
-    var s="recipent/"+num+"$"+opt+"$"+recipent_name;
+    var s="/recipent/"+num+"$"+opt+"$"+recipent_name;
    /* var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
@@ -71,13 +71,9 @@ app.controller('myCtrl', function($scope) {
     $scope.name = f;
     alert(f);
 });*/
-var f="h";
-var g="a";
-var c="i";
-var d=f+g+c;
 var app = angular.module('myApp', []);
 app.controller('myCtrl', function($scope, $http) {
-    $http.get("/"+d)
+    $http.get(s)
     .then(function(response) {
         $scope.myWelcome = response.data;
     });
