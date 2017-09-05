@@ -41,7 +41,7 @@ function donor()
    
     
 }
-var d;
+var f;
 function recipent()
 {
    
@@ -55,9 +55,11 @@ function recipent()
     if (this.readyState == 4 && this.status == 200) {
        // d=JSON.parse(this.responseText);
    // document.getElementById("main").style.display = 'none';
-     d=JSON.stringify(this.responseText);
-     call("d");
+     f=JSON.stringify(this.responseText);
 //    document.getElementById("demo").innerHTML = d;
+ var app = angular.module("myApp", []);
+app.controller("myCtrl", function($scope) {
+    $scope.firstName = f;
  
     }
   };
@@ -65,12 +67,8 @@ function recipent()
   xhttp.open("GET", s, true);
   xhttp.send();
   }
-  function call(s){
-  var app = angular.module("myApp", []);
-app.controller("myCtrl", function($scope) {
-    $scope.firstName = s;
+
 });
-}
  
         </script>
     </head>
