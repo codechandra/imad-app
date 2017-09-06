@@ -41,7 +41,7 @@ function donor()
    
     
 }
-var i=0;
+var i=0.l=0;
 function recipent()
 {
    
@@ -56,6 +56,7 @@ function recipent()
        // d=JSON.parse(this.responseText);
     document.getElementById("main").style.display = 'none';
      d=(JSON.parse(this.responseText));
+     l=d.length;
      document.getElementById("1").innerHTML = d[i]["donor_name"];
     document.getElementById("2").innerHTML = d[i]["donor_mobile"];
     document.getElementById("3").innerHTML = d[i]["donor_group"];
@@ -67,6 +68,12 @@ function recipent()
   }
   function nextt(){
       i++;
+      if(i==l)
+      {
+          document.getElementByid('next_button').innerHTML='No more donors';
+          document.getElementByid('next_button').disabled=true;
+          
+      }
        document.getElementById("1").innerHTML = d[i]["donor_name"];
     document.getElementById("2").innerHTML = d[i]["donor_mobile"];
     document.getElementById("3").innerHTML = d[i]["donor_group"];
@@ -137,7 +144,7 @@ app.controller('myCtrl', function($scope, $http) {
             <h1 style="border:2px solid grey" id="1"></h1>
              <h1 style="border:2px solid grey" id="2"></h1>
              <h1 style="border:2px solid grey" id="3"></h1>
-             <button onclick="nextt()">Show the details of next donor</button>
+             <button id="next_button" onclick="nextt()">Show the details of next donor</button>
         </div>
     </body>
     
