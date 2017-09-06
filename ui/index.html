@@ -57,7 +57,7 @@ function recipent()
     document.getElementById("main").style.display = 'none';
      d=(JSON.parse(this.responseText));
     document.getElementById("1").innerHTML = d[0]["donor_name"];
-    document.getElementById("2").innerHTML = d[1]["donor_mobile"];
+    document.getElementById("2").innerHTML = d[0]["donor_mobile"];
  
  
     }
