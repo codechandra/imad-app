@@ -71,6 +71,7 @@ app.controller('myCtrl', function($scope) {
     $scope.name = f;
     alert(f);
 });*/
+function get(){
 var app = angular.module('myApp', []);
 app.controller('myCtrl', function($scope, $http) {
     $http.get("hai")
@@ -79,6 +80,7 @@ app.controller('myCtrl', function($scope, $http) {
         
     });
 });
+}
  
         </script>
     </head>
@@ -108,7 +110,7 @@ app.controller('myCtrl', function($scope, $http) {
             <option value="o-">o-</option>
              <option value="o+">o+</option>
           </select><br/>
-          <button onclick="recipent()" class="w3-button w3-black w3-hover-red">Find the Donor</button>
+          <button onclick="get()" class="w3-button w3-black w3-hover-red">Find the Donor</button>
         </div>
         <div class=" w3-container  w3-center " id="donatee" style="display:none">
              <input class="w3-input w3-border w3-hover-grey w3-input" type="text"  placeholder="Enter your name" id="name_donor"><br>
