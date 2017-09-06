@@ -1,5 +1,3 @@
-
-
 function need()
 {
   document.getElementById('needd').style.display='block';
@@ -32,6 +30,7 @@ function donor()
    
     
 }
+var i=0,l=0;
 function recipent()
 {
    
@@ -44,19 +43,54 @@ function recipent()
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
        // d=JSON.parse(this.responseText);
-   // document.getElementById("main").style.display = 'none';
-    //var d=JSON.parse(this.responseText);
-//    document.getElementById("demo").innerHTML = d;
     
+    document.getElementById("main").style.display = 'none';
+    document.getElementById("demo").style.display = 'block';
+     d=(JSON.parse(this.responseText));
+     l=d.length;
+     document.getElementById("1").innerHTML = d[i]["donor_name"];
+    document.getElementById("2").innerHTML = d[i]["donor_mobile"];
+    document.getElementById("3").innerHTML = d[i]["donor_group"];
     }
   };
   
   xhttp.open("GET", s, true);
   xhttp.send();
   }
-  
-    
- 
-   
-   
+  function nextt(){
+      i++;
+      if(i==l)
+      {
+          document.getElementById('id01').style.display="block";
+          //document.getElementByid('nexttt').innerHTML="No more donors";
+         //document.getElementByid('nexttt').disabled=true;
+          
+      }
+      else
+      {
+       document.getElementById("1").innerHTML = d[i]["donor_name"];
+    document.getElementById("2").innerHTML = d[i]["donor_mobile"];
+    document.getElementById("3").innerHTML = d[i]["donor_group"];
+      }
+  }
+/*var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.nam = f;*/
+
+/*function geet(){
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope, $http) {
+    $http.get("/hai")
+    .then(function(response) {
+        $scope.myWelcome = response.data;
+        
+    });
+});
+}*/
+ function end()
+ {
+     document.getElementById('id01').style.display='none';
+     window.open('/');
+     window.close();
+ }
     
