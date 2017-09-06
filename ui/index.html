@@ -58,6 +58,7 @@ function recipent()
      d=(JSON.parse(this.responseText));
     document.getElementById("1").innerHTML = d[0]["donor_name"];
     document.getElementById("2").innerHTML = d[0]["donor_mobile"];
+    document.getElementById("2").innerHTML = d[0]["donor_group"];
  
  
     }
@@ -131,6 +132,7 @@ app.controller('myCtrl', function($scope, $http) {
         <div id="" class="w3-container">
             <h1 style="border:2px solid grey" id="1"></h1>
              <h1 style="border:2px solid grey" id="2"></h1>
+             <h1 style="border:2px solid grey" id="3"></h1>
         </div>
     </body>
     
