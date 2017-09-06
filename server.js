@@ -78,7 +78,7 @@ app.get('/recipent/:id',function(req,res){
     var two=(m[1]);
     var three=m[2];
     console.log(two);
-    pool.query('SELECT donor_name,donor_mobile FROM donor WHERE donor_group=$1 ',[two],function(err,result){
+    pool.query('SELECT donor_name,donor_mobile,donor_group FROM donor WHERE donor_group=$1 ',[two],function(err,result){
        if(err){
            res.status(500).send(err.toString());
        }
