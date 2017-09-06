@@ -101,7 +101,7 @@ app.get('/recipent/:id',function(req,res){
             
         }
         else
-        res.send((JSON.stringify(result.rows)));
+        res.send(((result.rows)));
         /*  res.send("<body ng-controller='CountryCtrl'><h2>Donor list</h2> <table><tr><th>Mobile number</th><th>Blood group</th><th>Name</th></tr><tr ng-repeat='country in data '><td>{{JSON.stringify(result.rows).donor_mobile}}</td><td>{{JSON.stringify(result.rows).donor_name}}</td><td>{{JSON.stringify(result.rows).donor_group}}</td></tr> </table></body>")
           */
         
