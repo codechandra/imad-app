@@ -41,7 +41,7 @@ function donor()
    
     
 }
-strict f;
+var f;
 function recipent()
 {
    
@@ -54,7 +54,7 @@ function recipent()
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
        // d=JSON.parse(this.responseText);
-   // document.getElementById("main").style.display = 'none';
+    document.getElementById("main").style.display = 'none';
      f=JSON.stringify(this.responseText);
     document.getElementById("demo").innerHTML = f;
  
