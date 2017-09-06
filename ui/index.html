@@ -41,7 +41,7 @@ function donor()
    
     
 }
-var f;
+var i=0;
 function recipent()
 {
    
@@ -56,16 +56,20 @@ function recipent()
        // d=JSON.parse(this.responseText);
     document.getElementById("main").style.display = 'none';
      d=(JSON.parse(this.responseText));
-    document.getElementById("1").innerHTML = d[0]["donor_name"];
-    document.getElementById("2").innerHTML = d[0]["donor_mobile"];
-    document.getElementById("3").innerHTML = d[0]["donor_group"];
- 
- 
+     document.getElementById("1").innerHTML = d[i]["donor_name"];
+    document.getElementById("2").innerHTML = d[i]["donor_mobile"];
+    document.getElementById("3").innerHTML = d[i]["donor_group"];
     }
   };
   
   xhttp.open("GET", s, true);
   xhttp.send();
+  }
+  function nextt(){
+      i++;
+       document.getElementById("1").innerHTML = d[i]["donor_name"];
+    document.getElementById("2").innerHTML = d[i]["donor_mobile"];
+    document.getElementById("3").innerHTML = d[i]["donor_group"];
   }
 /*var app = angular.module('myApp', []);
 app.controller('myCtrl', function($scope) {
@@ -133,6 +137,7 @@ app.controller('myCtrl', function($scope, $http) {
             <h1 style="border:2px solid grey" id="1"></h1>
              <h1 style="border:2px solid grey" id="2"></h1>
              <h1 style="border:2px solid grey" id="3"></h1>
+             <button onclick="nextt()">Show the details of next donor</button>
         </div>
     </body>
     
