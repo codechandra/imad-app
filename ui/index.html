@@ -70,8 +70,8 @@ function recipent()
       i++;
       if(i==l)
       {
-          document.getElementByid('next_button').innerHTML="No more donors";
-          document.getElementByid('next_button').disabled=true;
+          document.getElementByid('next').innerHTML="No more donors";
+          document.getElementByid('next').disabled=true;
           
       }
       else
@@ -147,7 +147,7 @@ app.controller('myCtrl', function($scope, $http) {
             <h1 style="border:2px solid grey" id="1"></h1>
              <h1 style="border:2px solid grey" id="2"></h1>
              <h1 style="border:2px solid grey" id="3"></h1>
-             <button id="next_button" onclick="nextt()">Show the details of next donor</button>
+             <button id="next" onclick="nextt()">Show the details of next donor</button>
         </div>
     </body>
     
