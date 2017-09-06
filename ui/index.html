@@ -68,18 +68,16 @@ function recipent()
   }
   function nextt(){
       i++;
-      if(i==l)
+      /*if(i==l)
       {
           document.getElementByid('next_button').innerHTML="No more donors";
           document.getElementByid('next_button').disabled=true;
           
-      }
-      else
-      {
+      }*/
+      
        document.getElementById("1").innerHTML = d[i]["donor_name"];
     document.getElementById("2").innerHTML = d[i]["donor_mobile"];
     document.getElementById("3").innerHTML = d[i]["donor_group"];
-      }
   }
 /*var app = angular.module('myApp', []);
 app.controller('myCtrl', function($scope) {
