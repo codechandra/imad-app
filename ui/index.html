@@ -152,10 +152,18 @@ app.controller('myCtrl', function($scope, $http) {
         </div>
         </div>
         <div id="demo" class="w3-container w3-card-4" style="display:none">
-            <h1 style="border:2px solid grey" id="1"></h1>
-             <h1 style="border:2px solid grey" id="2"></h1>
-             <h1 style="border:2px solid grey" id="3"></h1>
-             <button id="nexttt" onclick="nextt()">Show the details of next donor</button>
+            <header class="w3-container w3-light-grey">
+  <h3 id="1"></h3>
+</header>
+
+<div class="w3-container">
+  <hr>
+  <p id="2"></p>
+  <p id="3"></p>
+</div>
+
+<button onclick="nextt()" class="w3-button w3-block w3-dark-grey">show next donor</button>
+
         </div>
          <div id="id01" class="w3-modal">
     <div class="w3-modal-content w3-animate-top w3-card-4">
