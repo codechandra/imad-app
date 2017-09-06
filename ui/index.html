@@ -71,9 +71,9 @@ app.controller('myCtrl', function($scope) {
     $scope.name = f;
     alert(f);
 });*/
-var app = angular.module('myApp', []);
-function geet(){
 
+function geet(){
+var app = angular.module('myApp', []);
 app.controller('myCtrl', function($scope, $http) {
     $http.get("/hai")
     .then(function(response) {
