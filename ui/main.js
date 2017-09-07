@@ -16,19 +16,16 @@ function donor()
     var group=document.getElementById('donor_group');
     var opt = group.options[group.selectedIndex].text;
     var donor_name=document.getElementById('name_donor').value;
-    var s='donor/'+num+'$'+opt+'$'+donor_name;
+    var s='/donor/'+num+'$'+opt+'$'+donor_name;
     var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-        d=JSON.stringify(this.responseText);
-    document.getElementById("main").style.display = 'none';
-      document.getElementById("demo").innerHTML = d[0].donor_mobile;
+   // document.getElementById("main").style.display = 'none';
+   alert(this.responseText);
     }
   };
-  xhttp.open("GET", "/"+s, true);
+  xhttp.open("GET", s, true);
   xhttp.send();
-   
-    
 }
 var i=0,l=0;
 function recipent()
@@ -42,8 +39,6 @@ function recipent()
     var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-       // d=JSON.parse(this.responseText);
-    
     document.getElementById("main").style.display = 'none';
     document.getElementById("demo").style.display = 'block';
      d=(JSON.parse(this.responseText));
@@ -53,7 +48,6 @@ function recipent()
     document.getElementById("3").innerHTML = d[i]["donor_group"];
     }
   };
-  
   xhttp.open("GET", s, true);
   xhttp.send();
   }
@@ -62,8 +56,6 @@ function recipent()
       if(i==l)
       {
           document.getElementById('id01').style.display="block";
-          //document.getElementByid('nexttt').innerHTML="No more donors";
-         //document.getElementByid('nexttt').disabled=true;
           
       }
       else
@@ -73,20 +65,6 @@ function recipent()
     document.getElementById("3").innerHTML = d[i]["donor_group"];
       }
   }
-/*var app = angular.module('myApp', []);
-app.controller('myCtrl', function($scope) {
-    $scope.nam = f;*/
-
-/*function geet(){
-var app = angular.module('myApp', []);
-app.controller('myCtrl', function($scope, $http) {
-    $http.get("/hai")
-    .then(function(response) {
-        $scope.myWelcome = response.data;
-        
-    });
-});
-}*/
  function end()
  {
      document.getElementById('id01').style.display='none';
