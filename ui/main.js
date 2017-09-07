@@ -21,7 +21,7 @@ function donor()
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
    
-   alert(this.responseText);
+   document.getElementById('id02').style.display="block"
     document.getElementById("name_donor").value = "";
    document.getElementById("number_donor").value= "";
     }
