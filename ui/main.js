@@ -20,8 +20,10 @@ function donor()
     var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-   // document.getElementById("main").style.display = 'none';
+   
    alert(this.responseText);
+    document.getElementById("name_donor").innerHTML = "";
+   document.getElementById("number_donor").innerHTML= "";
     }
   };
   xhttp.open("GET", s, true);
