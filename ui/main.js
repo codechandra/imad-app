@@ -21,7 +21,8 @@ function donor()
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
    
-   document.getElementById('id02').style.display="block"
+   document.getElementById('id02').style.display="block";
+   document.getElementById('m').innerHTML=donor_name;
     document.getElementById("name_donor").value = "";
    document.getElementById("number_donor").value= "";
     }
@@ -58,6 +59,7 @@ function recipent()
       if(i==l)
       {
           document.getElementById('id01').style.display="block";
+          
           
       }
       else
