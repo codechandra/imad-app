@@ -22,8 +22,8 @@ function donor()
     if (this.readyState == 4 && this.status == 200) {
    
    alert(this.responseText);
-    document.getElementById("name_donor").innerHTML = "";
-   document.getElementById("number_donor").innerHTML= "";
+    document.getElementById("name_donor").value = "";
+   document.getElementById("number_donor").value= "";
     }
   };
   xhttp.open("GET", s, true);
