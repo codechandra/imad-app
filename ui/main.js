@@ -13,6 +13,11 @@ function donor()
 {
     var d;
     var num=document.getElementById('number_donor').value;
+    if(num.length<10)
+    {
+        alert("please enter a valid mobile number");
+        return false;
+    }
     var group=document.getElementById('donor_group');
     var opt = group.options[group.selectedIndex].text;
     var donor_name=document.getElementById('name_donor').value;
