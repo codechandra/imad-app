@@ -79,7 +79,7 @@ function recipent()
     if (this.readyState == 4 && this.status == 200) {
     document.getElementById("main").style.display = 'none';
     document.getElementById("demo").style.display = 'block';
-    if(this.responseText==="error"){
+    if(this.responseText.equals("error")){
         
       document.getElementById('id03').style.display="block";
        document.getElementById('msg').innerHTML="Mobile number is already registered";
