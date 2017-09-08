@@ -15,7 +15,8 @@ function donor()
     var num=document.getElementById('number_donor').value;
     if(num.length<10)
     {
-        alert("please enter a valid mobile number");
+        document.getElementById('id03').style.display="block";
+          
         return false;
     }
     var group=document.getElementById('donor_group');
