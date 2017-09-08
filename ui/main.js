@@ -15,8 +15,9 @@ function donor()
     var num=document.getElementById('number_donor').value;
     if(num.length<10)
     {
-        document.getElementById('id03').style.display="block";
-          
+       // document.getElementById('id03').style.display="block";
+       alert('error');
+
         return false;
     }
     var group=document.getElementById('donor_group');
