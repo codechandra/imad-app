@@ -20,12 +20,12 @@ function donor()
     var s='/donor/'+num+'$'+opt+'$'+donor_name;
     if(num.length<10)
     {
-       error+="Please enter a valid mobile number";
+       error+="Please enter a valid mobile number\n";
        
     }
     if(donor_name==="")
     {
-        error+="and name";
+        error+="please enter your name";
     }
     if(error!=="")
     {
