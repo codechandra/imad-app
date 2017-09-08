@@ -11,18 +11,28 @@ function donate()
 
 function donor()
 {
-    var d;
+    var d,error="";
     var num=document.getElementById('number_donor').value;
-    if(num.length<10)
-    {
-       document.getElementById('id03').style.display="block";
-       //alert('error');
-       return false;
-    }
+    
     var group=document.getElementById('donor_group');
     var opt = group.options[group.selectedIndex].text;
     var donor_name=document.getElementById('name_donor').value;
     var s='/donor/'+num+'$'+opt+'$'+donor_name;
+    if(num.length<10)
+    {
+       error+="Please enter a valid mobile number";
+       
+    }
+    if(name_donor.length===0)
+    {
+        error+="and name";
+    }
+    if(error!=="")
+    {
+        document.getElementById('id03').style.display="block";
+       document.getElementById('msg').innerHTML=error;
+       return false;
+    }
     var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
