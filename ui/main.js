@@ -23,7 +23,7 @@ function donor()
        error+="Please enter a valid mobile number";
        
     }
-    if(name_donor.length===0)
+    if(donor_name==="")
     {
         error+="and name";
     }
