@@ -17,7 +17,7 @@ function donor()
     {
        document.getElementById('id03').style.display="block";
        //alert('error');
-        return false;
+       // return false;
     }
     var group=document.getElementById('donor_group');
     var opt = group.options[group.selectedIndex].text;
