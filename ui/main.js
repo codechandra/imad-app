@@ -41,7 +41,7 @@ function donor()
    document.getElementById('m').innerHTML=donor_name;
    document.getElementById('d_name').innerHTML=donor_name;
    document.getElementById('d_mobile').innerHTML=num;
-   document.getElementById('d_group').innerHTML=group;
+   document.getElementById('d_group').innerHTML=opt;
    
     document.getElementById("name_donor").value = "";
    document.getElementById("number_donor").value= "";
