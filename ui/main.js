@@ -39,6 +39,10 @@ function donor()
    
    document.getElementById('id02').style.display="block";
    document.getElementById('m').innerHTML=donor_name;
+   document.getElementById('d_name').innerHTML=donor_name;
+   document.getElementById('d_mobile').innerHTML=num;
+   document.getElementById('d_group').innerHTML=group;
+   
     document.getElementById("name_donor").value = "";
    document.getElementById("number_donor").value= "";
     }
