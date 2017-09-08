@@ -49,12 +49,27 @@ function donor()
 var i=0,l=0;
 function recipent()
 {
-   
+   var error="";
     var num=document.getElementById('number_recipent').value;
     var group=document.getElementById('recipent_group');
     var opt = group.options[group.selectedIndex].text;
     var recipent_name=document.getElementById('name_recipent').value;
     var s="/recipent/"+num+"$"+opt+"$"+recipent_name;
+    if(num.length<10)
+    {
+       error+="Please enter a valid mobile number<br>";
+       
+    }
+    if(recipent_name==="")
+    {
+        error+="please enter your name";
+    }
+    if(error!=="")
+    {
+        document.getElementById('id03').style.display="block";
+       document.getElementById('msg').innerHTML=error;
+       return false;
+    }
     var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
