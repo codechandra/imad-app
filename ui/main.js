@@ -79,6 +79,12 @@ function recipent()
     if (this.readyState == 4 && this.status == 200) {
     document.getElementById("main").style.display = 'none';
     document.getElementById("demo").style.display = 'block';
+    if(this.responseText==="error"){
+        
+      document.getElementById('id03').style.display="block";
+       document.getElementById('msg').innerHTML="Mobile number is already registered";
+       return false; 
+    }
      d=(JSON.parse(this.responseText));
      l=d.length;
      document.getElementById("1").innerHTML = d[i]["donor_name"];
