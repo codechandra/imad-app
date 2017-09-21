@@ -1,5 +1,6 @@
 function need()
 {
+    document.getElementById('nb').style.backgroundColor = "red";
   document.getElementById('needd').style.display='block';
     document.getElementById('donatee').style.display='none';
 }
