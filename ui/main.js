@@ -8,3 +8,13 @@ function register_fun()
      document.getElementById('login').style.display="none";
       document.getElementById('register').style.display="block";
 }
+function register_buyer()
+{
+    document.getElementById('buyer_register').style.display="none";
+     document.getElementById('seller_register').style.display="block";
+}
+function register_seller()
+{
+    document.getElementById('buyer_register').style.display="block";
+     document.getElementById('seller_register').style.display="none";
+}
