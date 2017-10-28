@@ -31,8 +31,8 @@
    </form>
 </div>
 <div style="display:none" id="register" class="w3-conatiner w3-center">
-    <button class="w3-btn w3-teal" onclick="document.getElementById('buyer_register').style.display='block'">Buyer</button>
-        <button onclick="document.getElementById(seller_register).style.display='block'" class="w3-btn w3-teal">Seller</button>
+    <button class="w3-btn w3-teal" onclick="register_buyer()">Buyer</button>
+        <button onclick="register_seller()" class="w3-btn w3-teal">Seller</button>
         <div class="w3-container w3-center" style="display:none" id="buyer_register">
             <input style="margin-bottom:5px;margin-top:5px" type="text" id="buyer_name" placeholder="Enter your name"><br>
             <input style="margin-bottom:5px" type="number" id="buyer_contact" placeholder="Contact number"><br>
