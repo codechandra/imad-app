@@ -1,132 +1,14 @@
-
 <!DOCTYPE html>
 <html>
     <head>
-        <title>E-blood bank</title>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-      <!-- <meta name="viewport" content="width=device-width,intial-scale=1.0">-->
-        <!--<link rel="stylesheet" type="text/css" href="/ui/Blood.css>-->
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
-        <script type="text/javascript" src="/ui/main.js"></script>
-        <style>
-            #footer{
-                width: 100%;
-    height: 100px;
-    position: absolute;
-    bottom: 0px;
-            }
-            body{ height: 1000px;}
-        </style>
+        <title>
+            E-estate
+        </title>
     </head>
-    <body class=" w3-center " style="margin-top:10%;margin-left:30%;margin-right:30%;background-color:" >
-
-        <div id="main" class="w3-card-4 ">
-      <div class=" " >
-        <div class=" w3-center w3-container ">
-        <h1>e-<img src="https://image.ibb.co/kSZm9F/bloodd.png" alt="bloodd" border="0" width="40" height="40"> bank</h1>
-        <button  style="border-radius:5px" onclick="donate()" class="w3-btn w3-grey w3-hover-green">Donate Blood</button>
-        <button id="nb" style="border-radius:5px" onclick="need()" class="w3-btn w3-grey w3-hover-red ">Need Blood</button>
-        
-      </div>
+    <body>
+        <div class="w3-container">
+            <h1>E-estate</h1>
         </div>
-        <pre>    
-        </pre>
-        <div class=" w3-container  w3-center " id="needd" style="display:none">
-           <input  maxlength="10" class="w3-input w3-border w3-hover-grey w3-input" type="text" placeholder="Enter your mobile number" id="number_recipent"><br>
-          <input  class="w3-input w3-input w3-border w3-hover-grey" type="text" placeholder="Enter your name" id="name_recipent"><br>
-          Select the Blood group you need
-          <select class="" id="recipent_group">
-            <option value="A-">A-</option>
-            <option value="A+">A+</option>
-             <option value="A-">AB-</option>
-            <option value="A+">AB+</option>
-            <option value="B+">B+</option>
-            <option value="B-">B-</option>
-            <option value="o-">o-</option>
-             <option value="o+">o+</option>
-          </select><br/>
-          <button  style="border-radius:5px"  onclick="recipent()" class="w3-btn w3-black  w3-hover-red">Find the Donor</button>
-        </div>
-        <div class=" w3-container  w3-center " id="donatee" style="display:none">
-             <input class="w3-input w3-border w3-hover-grey w3-input" type="text"  placeholder="Enter your name" id="name_donor"><br>
-            <input maxlength="10" class="w3-input w3-border w3-hover-grey w3-input" type="text" placeholder="Enter your mobile number" id="number_donor"><br>
-          Select your Blood group
-          <select class="" id="donor_group">
-             <option value="A-">A-</option>
-            <option value="A+">A+</option>
-             <option value="A-">AB-</option>
-            <option value="A+">AB+</option>
-            <option value="B+">B+</option>
-            <option value="B-">B-</option>
-            <option value="o-">o-</option>
-             <option value="o+">o+</option>
-          </select><br/>
-          <button  style="border-radius:5px"  onclick="donor()" class="w3-button w3-black w3-hover-green">Donate</button>
-        </div>
-        </div>
-        <div id="demo" class="w3-container w3-card-4" style="display:none">
-            <header class="w3-container w3-light-grey">
-  <h3>Donor data</h3>
-</header>
-
-<div class="w3-container">
-  <hr>
-  <h3 >Name: <span id="1"></span></h3>
-  <h3>mobile: <span id="2"></span></h3>
-   <h3>Blood group: <span id="3"></span></h3>
-</div>
-
-<button onclick="nextt()" class="w3-button w3-block w3-grey">show next donor</button>
-
-        </div>
-         <div id="id01" class="w3-modal">
-    <div class="w3-modal-content w3-animate-top w3-card-4">
-      <header class="w3-container w3-teal"> 
-        <span onclick="end()" 
-        class="w3-button w3-display-topright">&times;</span>
-        <h2>Sorry</h2>
-      </header>
-      <div class="w3-container">
-        <p>There are no more donors.We deeply regret our helplessness.Hoping that you'll definetly be helped.May god be with you.</p>
-    
-      </div>
-      <footer class="w3-container w3-teal">
-        <p>E-blood bank</p>
-      </footer>
-    </div>
-  </div>
-   <div id="id02" class="w3-modal">
-    <div class="w3-modal-content w3-animate-top w3-card-4">
-      <header class="w3-container w3-green"> 
-        <span onclick="document.getElementById('id02').style.display='none'" 
-        class="w3-button w3-display-topright">&times;</span>
-        <h2>Success</h2>
-      </header>
-      <div class="w3-container">
-    <img src="https://image.ibb.co/fHAXYa/images.png" alt="images" border="0"/>
-    <p>You've successfully registered with our E-blood bank</p>
-    <p>Here's your profile</p>
-     <p> Name:<span id="d_name"></span></p>
-       <p >Mobile: <span id="d_mobile"></span></p>
-      <p> Blood group:<span id="d_group"></span></p>
-      <p><span id="m"></span>,we appreciate your kindness.We'll contact you in need </p>
-      </div>
-      <footer class="w3-container w3-green">
-        <p>Made with <i style="color:red;font-size:20" class="material-icons">favorite</i> by chandra mouli </p>
-      </footer>
-    </div>
-  </div>
-  <div id="id03" class="w3-modal ">
-    <div class="w3-modal-content">
-      <div class="w3-container w3-red">
-        <span onclick="document.getElementById('id03').style.display='none'" class="w3-button w3-display-topright">&times;</span>
-        <p id="msg"></p>
-      </div>
-    </div>
-  </div>
-
     </body>
-    
 </html>
