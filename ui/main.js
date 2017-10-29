@@ -79,6 +79,7 @@ function s()
 {
      document.getElementById('register').style.display="block";
      document.getElementById('home').style.display="none";
+      document.getElementById('buyer_register').style.display="none";
       document.getElementById('seller_register').style.display="block";
 }
 function b()
@@ -86,5 +87,6 @@ function b()
      document.getElementById('register').style.display="block";
      document.getElementById('home').style.display="none";
       document.getElementById('buyer_register').style.display="block";
+       document.getElementById('seller_register').style.display="none";
 }
 
