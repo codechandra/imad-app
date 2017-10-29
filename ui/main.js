@@ -19,25 +19,25 @@ function register_fun()
 }
 function register_buyer()
 {
-    document.getElementById('login').style.display="none";
-     document.getElementById('register').style.display="none";
+    /*document.getElementById('login').style.display="none";
+     document.getElementById('register').style.display="none";*/
       document.getElementById('buyer_register').style.display="block";
        document.getElementById('seller_register').style.display="none";
-     document.getElementById('home').style.display="none";
+    /* document.getElementById('home').style.display="none";
       document.getElementById('aboutus').style.display="none";
      document.getElementById('contact').style.display="none";
-     document.getElementById('achievements').style.display="none";
+     document.getElementById('achievements').style.display="none";*/
 }
 function register_seller()
 {
-    document.getElementById('login').style.display="none";
+    /*document.getElementById('login').style.display="none";
      document.getElementById('register').style.display="none";
      document.getElementById('home').style.display="none";
-      document.getElementById('buyer_register').style.display="none";
-       document.getElementById('seller_register').style.display="block";
       document.getElementById('aboutus').style.display="none";
      document.getElementById('contact').style.display="none";
-     document.getElementById('achievements').style.display="none";
+     document.getElementById('achievements').style.display="none";*/
+      document.getElementById('buyer_register').style.display="none";
+       document.getElementById('seller_register').style.display="block";
 }
 function home_fun()
 {
