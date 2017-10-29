@@ -75,4 +75,16 @@ function contact_fun()
      document.getElementById('contact').style.display="block";
      document.getElementById('an').style.display="none";
 }
+function s()
+{
+     document.getElementById('register').style.display="block";
+     document.getElementById('home').style.display="none";
+      document.getElementById('seller_register').style.display="block";
+}
+function b()
+{
+     document.getElementById('register').style.display="block";
+     document.getElementById('home').style.display="none";
+      document.getElementById('buyer_register').style.display="block";
+}
 
