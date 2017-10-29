@@ -5,7 +5,7 @@ function login_fun()
      document.getElementById('home').style.display="none";
       document.getElementById('aboutus').style.display="none";
      document.getElementById('contact').style.display="none";
-     document.getElementById('achievements').style.display="none";
+     document.getElementById('a').style.display="none";
      
 }
 function register_fun()
@@ -15,7 +15,7 @@ function register_fun()
      document.getElementById('home').style.display="none";
       document.getElementById('aboutus').style.display="none";
      document.getElementById('contact').style.display="none";
-     document.getElementById('achievements').style.display="none";
+     document.getElementById('a').style.display="none";
 }
 function register_buyer()
 {
@@ -46,7 +46,7 @@ function home_fun()
      document.getElementById('home').style.display="block";
       document.getElementById('aboutus').style.display="none";
      document.getElementById('contact').style.display="none";
-     document.getElementById('achievements').style.display="none";
+     document.getElementById('a').style.display="none";
 }
 function aboutus_fun()
 {
@@ -55,7 +55,7 @@ function aboutus_fun()
      document.getElementById('home').style.display="none";
       document.getElementById('aboutus').style.display="block";
      document.getElementById('contact').style.display="none";
-     document.getElementById('achievements').style.display="none";   
+     document.getElementById('a').style.display="none";   
 }
 function achievements_fun()
 {
@@ -64,7 +64,7 @@ function achievements_fun()
      document.getElementById('home').style.display="none";
       document.getElementById('aboutus').style.display="none";
      document.getElementById('contact').style.display="none";
-     document.getElementById('achievements').style.display="block";   
+     document.getElementById('a').style.display="block";   
 }
 function contact_fun()
 {
@@ -73,6 +73,6 @@ function contact_fun()
      document.getElementById('home').style.display="none";
       document.getElementById('aboutus').style.display="none";
      document.getElementById('contact').style.display="block";
-     document.getElementById('achievements').style.display="none";
+     document.getElementById('a').style.display="none";
 }
 
