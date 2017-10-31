@@ -96,7 +96,17 @@ function buyerregister_form()
     contact=document.getElementById('buyer_contact').value;
     email=document.getElementById('buyer_email').value;
     password=document.getElementById('buyer_password').value;
-    window.alert(name+contact+email+password);
+   // window.alert(name+contact+email+password);
+   var s="/buyerregister";
+     var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+     d=(JSON.parse(this.responseText));
+     l=d.length;
+    }
+  };
+  xhttp.open("GET", s, true);
+  xhttp.send();
    // window.alert('hai');
     
     
