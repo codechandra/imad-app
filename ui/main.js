@@ -98,7 +98,7 @@ function buyerregister_form()
     email=document.getElementById('buyer_email').value;
     password=document.getElementById('buyer_password').value;
    // window.alert(name+contact+email+password);
-    s="/buyerregister";
+    
      var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
@@ -106,7 +106,7 @@ function buyerregister_form()
      l=d.length;
     }
   };
-  xhttp.open("GET", s, true);
+  xhttp.open("GET", "/buyer", true);
   xhttp.send();
    window.alert(d);
     
