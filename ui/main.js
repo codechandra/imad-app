@@ -107,7 +107,7 @@ xhttp.onreadystatechange = function() {
        window.alert(this.responseText);
     }
 };
-xhttp.open("GET", "hai", true);
+xhttp.open("GET", "/hai", true);
 xhttp.send();
     
     
