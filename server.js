@@ -20,7 +20,23 @@ app.get('/renderr',function(req,res){
     res.render('donor',{title:'mouli'});
 });
 app.get('/hai/:id',function(req,res){
-    res.send(req.params.id);
+    var value=req.params.id;
+    var m=value.split('$');
+    var one=(m[0]);
+    var two=(m[1]);
+    var three=m[2];
+    var four=m[4];
+    pool.query('INSERT INTO customer(cname,cmail,cmobile,cpassword) VALUES ($1,$2,$3,$4)',[one,two,three,four],function(err,result){
+       if(err){
+           res.status(500).send(err.toString());
+       }
+       else
+       {
+            var value=req.params.id;
+            var three=m[2];
+           res.send(one);
+       }
+   }) ;
 });
 
 var pool=new Pool(config);
