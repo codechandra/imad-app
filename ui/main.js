@@ -89,4 +89,13 @@ function b()
       document.getElementById('buyer_register').style.display="block";
        document.getElementById('seller_register').style.display="none";
 }
-
+function buyerregister_form()
+{
+    var name,contact,email,password;
+    name=document.getElementById('buyer_name').value;
+    contact=document.getElementById('buyer_contact').value;
+    email=document.getElementById('buyer_email').value;
+    password=document.getElementById('buyer_password').value;
+    window.alert(name+contact+email+password);
+    
+}
