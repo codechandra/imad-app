@@ -19,8 +19,8 @@ var config={
 app.get('/renderr',function(req,res){
     res.render('donor',{title:'mouli'});
 });
-app.get('/hai',function(req,res){
-    res.send("hello");
+app.get('/hai/:id',function(req,res){
+    res.send(req.params.id);
 });
 
 var pool=new Pool(config);
