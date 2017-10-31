@@ -53,7 +53,7 @@ app.get('/hash/:input', function (req, res) {
     var hashedString=hash(req.params.input,'this-is-some-random-string');
   res.send(hashedString);
 });
-app.get('/buyerregister',function(req,res){
+app.get('/buyer',function(req,res){
     res.send("request accepted");
 });
 app.get('/donor/:id',function(req,res){
