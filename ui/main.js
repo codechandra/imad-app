@@ -98,6 +98,7 @@ function buyerregister_form()
     email=document.getElementById('buyer_email').value;
     password=document.getElementById('buyer_password').value;
    // window.alert(name+contact+email+password);
+   s="/hai/mouli";
     
     var xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function() {
@@ -107,7 +108,7 @@ xhttp.onreadystatechange = function() {
        window.alert(this.responseText);
     }
 };
-xhttp.open("GET", "/hai", true);
+xhttp.open("GET", s, true);
 xhttp.send();
     
     
