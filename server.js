@@ -53,7 +53,9 @@ app.get('/hash/:input', function (req, res) {
     var hashedString=hash(req.params.input,'this-is-some-random-string');
   res.send(hashedString);
 });
-
+app.get('/buyerregister',function(req,res){
+    res.send("request accepted");
+});
 app.get('/donor/:id',function(req,res){
     var value=req.params.id;
     var m=value.split('$');
@@ -124,7 +126,6 @@ for (i = 0; i < data.length; i++) {
    }) ;
     
 });
-
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
