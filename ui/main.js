@@ -98,7 +98,7 @@ function buyerregister_form()
     email=document.getElementById('buyer_email').value;
     password=document.getElementById('buyer_password').value;
    // window.alert(name+contact+email+password);
-   s="/hai/"+name+"$"+mail+"$"+contact+"$"+password;
+  var s="/hai/"+name+"$"+contact+"$"+email+"$"+password;
     
     var xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function() {
