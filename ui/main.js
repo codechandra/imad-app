@@ -91,11 +91,13 @@ function b()
 }
 function buyerregister_form()
 {
-    var name,contact,email,password;
+   /* var name,contact,email,password;
     name=document.getElementById('buyer_name').value;
     contact=document.getElementById('buyer_contact').value;
     email=document.getElementById('buyer_email').value;
     password=document.getElementById('buyer_password').value;
-    window.alert(name+contact+email+password);
+    window.alert(name+contact+email+password);*/
+    alert("hai");
+    
     
 }
