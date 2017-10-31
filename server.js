@@ -20,7 +20,7 @@ app.get('/renderr',function(req,res){
     res.render('donor',{title:'mouli'});
 });
 app.get('/hai',function(req,res){
-    res.send(JSON.parse("hello"));
+    res.send("hello");
 });
 
 var pool=new Pool(config);
