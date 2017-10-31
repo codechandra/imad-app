@@ -32,7 +32,7 @@ app.get('/hai/:id',function(req,res){
        }
        else
        {
-           res.send("thank you");
+           res.send(one);
        }
    }) ;
 });
@@ -84,7 +84,7 @@ app.get('/donor/:id',function(req,res){
        {
             var value=req.params.id;
             var three=m[2];
-           res.send("Thank you");
+           res.send();
        }
    }) ;
     
