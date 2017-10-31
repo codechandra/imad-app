@@ -32,9 +32,7 @@ app.get('/hai/:id',function(req,res){
        }
        else
        {
-            var value=req.params.id;
-            var three=m[2];
-           res.send(one);
+           res.send("thank you");
        }
    }) ;
 });
