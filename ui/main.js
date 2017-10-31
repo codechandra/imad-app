@@ -99,16 +99,16 @@ function buyerregister_form()
     password=document.getElementById('buyer_password').value;
    // window.alert(name+contact+email+password);
     
-     var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
+    var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-     d=(JSON.parse(this.responseText));
-     l=d.length;
+       // Typical action to be performed when the document is ready:
+       //document.getElementById("demo").innerHTML = xhttp.responseText;
+       window.alert(this.responseText);
     }
-  };
-  xhttp.open("GET", "/hai", true);
-  xhttp.send();
-   window.alert(d);
+};
+xhttp.open("GET", "hai", true);
+xhttp.send();
     
     
 }
