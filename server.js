@@ -19,7 +19,7 @@ var config={
 app.get('/renderr',function(req,res){
     res.render('donor',{title:'mouli'});
 });
-app.get('/buyer_register/:id',function(req,res){
+app.get('/hai/:id',function(req,res){
     var value=req.params.id;
     var m=value.split('$');
     var one=(m[0]);
