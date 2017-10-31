@@ -108,7 +108,7 @@ function buyerregister_form()
   };
   xhttp.open("GET", s, true);
   xhttp.send();
-   // window.alert('hai');
+   window.alert(d);
     
     
 }
