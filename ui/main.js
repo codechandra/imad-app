@@ -106,7 +106,7 @@ function buyerregister_form()
      l=d.length;
     }
   };
-  xhttp.open("GET", "/buyer", true);
+  xhttp.open("GET", "/hai", true);
   xhttp.send();
    window.alert(d);
     
