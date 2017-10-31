@@ -25,7 +25,7 @@ app.get('/hai/:id',function(req,res){
     var one=(m[0]);
     var two=(m[1]);
     var three=m[2];
-    var four=m[4];
+    var four=m[3];
     pool.query('INSERT INTO customer(cname,cmail,cmobile,cpassword) VALUES ($1,$2,$3,$4)',[one,two,three,four],function(err,result){
        if(err){
            res.status(500).send(err.toString());
