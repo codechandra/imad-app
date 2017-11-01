@@ -33,7 +33,7 @@ app.get('/hai/:id',function(req,res){
        else
        {
           
-           res.send("Thank you"+one);
+           res.send("Thank you");
        }
    }) ;
 });
@@ -50,7 +50,7 @@ app.get('/hello/:id',function(req,res){
        }
        else
        {
-           res.send("Thank you"+one);
+           res.send("Thank you");
        }
    }) ;
 });
