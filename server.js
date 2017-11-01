@@ -54,7 +54,23 @@ app.get('/hello/:id',function(req,res){
        }
    }) ;
 });
-
+app.get('/hello1/:id',function(req,res){
+    var value=req.params.id;
+    var m=value.split('$');
+    var one=(m[0]);
+    var two=(m[1]);
+    var three=m[2];
+    var four=(m[3]);
+    pool.query('INSERT INTO property(ptype,parea,psize,pdescription) VALUES ($1,$2,$3,$4)',[one,two,three,four],function(err,result){
+       if(err){
+           res.status(500).send(err.toString());
+       }
+       else
+       {
+           res.send("Thank you");
+       }
+   }) ;
+});
 var pool=new Pool(config);
 pool.connect();
 app.get('/test-db',function(req,res){
