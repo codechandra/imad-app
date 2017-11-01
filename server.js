@@ -49,7 +49,7 @@ app.get('/hello/:id',function(req,res){
        }
        else
        {
-           res.send("thankyou");
+           res.send(one);
        }
    }) ;
 });
