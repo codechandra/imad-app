@@ -108,7 +108,7 @@ xhttp.onreadystatechange = function() {
        //var r=xhttp.responseText;
      // alert("Thank you "+r+"You've successfully registered as a buyer");
     alert("Thank you "+xhttp.responseText+" You've successfullly registered as a buyer on E-estate.please login to see your profile");
-    
+      login_fun();  
     }
 };
 xhttp.open("GET", s, true);
