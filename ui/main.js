@@ -105,7 +105,7 @@ function propertyregister_fun()
       des=document.getElementById('pdesc').value;
         ptype=document.getElementById('property_type');
     var choice = ptype.options[ptype.selectedIndex].text;
-    var s="/hello1/"+choice+"$"+area+"$"+size+"$"+des;
+    var s="/hello1/"+namex+"$"+choice+"$"+area+"$"+size+"$"+des;
     
     var xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function() {
