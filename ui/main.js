@@ -107,7 +107,7 @@ xhttp.onreadystatechange = function() {
        //document.getElementById("demo").innerHTML = xhttp.responseText;
        //var r=xhttp.responseText;
      // alert("Thank you "+r+"You've successfully registered as a buyer");
-     alert(xhttp.responseText);
+    alert("Thank you "+xhttp.responseText+" You've successfullly registered as a buyer");
     }
 };
 xhttp.open("GET", s, true);
@@ -136,7 +136,7 @@ xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
        // Typical action to be performed when the document is ready:
        //document.getElementById("demo").innerHTML = xhttp.responseText;
-       alert(xhttp.responseText);
+       alert("Thank you "+xhttp.responseText+" You've successfullly registered as a seller");
        
     }
 };
