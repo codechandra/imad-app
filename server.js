@@ -32,8 +32,8 @@ app.get('/hai/:id',function(req,res){
        }
        else
        {
-           var one=m[0];
-           res.send(one);
+          
+           res.send("Thank you"+one);
        }
    }) ;
 });
