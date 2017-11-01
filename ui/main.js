@@ -116,5 +116,10 @@ xhttp.send();
 }
 function sellerregister_form()
 {
-    alert("hai");
+     var name,contact,email,password;
+    name=document.getElementById('seller_name').value;
+    contact=document.getElementById('seller_contact').value;
+    email=document.getElementById('seller_email').value;
+    password=document.getElementById('seller_password').value;
+    window.alert(name+contact+email+password);
 }
