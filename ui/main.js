@@ -100,7 +100,7 @@ function propertyregister_fun()
       document.getElementById('property_register').style.display="block";
       
      */
-     alert(namex);
+     var namex=document.getElementById('piid').value;
      size=document.getElementById('property_size').value;
      parea=document.getElementById('property_city').value;
       des=document.getElementById('pdesc').value;
