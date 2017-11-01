@@ -116,11 +116,16 @@ xhttp.send();
 }
 function sellerregister_form()
 {
-     var name,contact,email,password;
+     var name,contact,email,password,ptype,parea,city,size,des;
     name=document.getElementById('seller_name').value;
     contact=document.getElementById('seller_contact').value;
     email=document.getElementById('seller_email').value;
     password=document.getElementById('seller_password').value;
+     size=document.getElementById('property_size').value;
+     parea=document.getElementById('property_city').value;
+      des=document.getElementById('p_desc').value;
+      alert(des);
+    
     //window.alert(name+contact+email+password);
      var s="/hello/"+name+"$"+email+"$"+password+"$"+contact;
     
