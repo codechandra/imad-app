@@ -43,6 +43,10 @@ app.get('/hello/:id',function(req,res){
     var two=(m[1]);
     var three=m[2];
     var four=parseInt(m[3]);
+    var five=m[4];
+    var six=m[5];
+    var seven=m[6];
+    var eight=m[7];
     pool.query('INSERT INTO seller(sname,semail,spassword,smobile) VALUES ($1,$2,$3,$4)',[one,two,three,four],function(err,result){
        if(err){
            res.status(500).send(err.toString());
@@ -50,6 +54,15 @@ app.get('/hello/:id',function(req,res){
        else
        {
            res.send("thankyou");
+       }
+   }) ;
+   pool.query('INSERT INTO property(ptype,parea,psize,pdescription) VALUES ($1,$2,$3,$4)',[five,six,seven,eight],function(err,result){
+       if(err){
+           res.status(500).send(err.toString());
+       }
+       else
+       {
+           res.send("thanks");
        }
    }) ;
 });
