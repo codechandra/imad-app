@@ -61,7 +61,7 @@ app.get('/hello1/:id',function(req,res){
     var two=(m[1]);
     var three=m[2];
     var four=(m[3]);
-    pool.query('INSERT INTO property(ptype,parea,psize,pdescription) VALUES ($1,$2,$3,$4)',[one,two,three,four],function(err,result){
+    pool.query('INSERT INTO property1(ptype,parea,psize,pdescription) VALUES ($1,$2,$3,$4)',[one,two,three,four],function(err,result){
        if(err){
            res.status(500).send(err.toString());
        }
