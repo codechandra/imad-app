@@ -121,5 +121,17 @@ function sellerregister_form()
     contact=document.getElementById('seller_contact').value;
     email=document.getElementById('seller_email').value;
     password=document.getElementById('seller_password').value;
-    window.alert(name+contact+email+password);
+    //window.alert(name+contact+email+password);
+     var s="/hello/"+name+"$"+contact+"$"+email+"$"+password;
+    
+    var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+       // Typical action to be performed when the document is ready:
+       //document.getElementById("demo").innerHTML = xhttp.responseText;
+       
+    }
+};
+xhttp.open("GET", s, true);
+xhttp.send();
 }
