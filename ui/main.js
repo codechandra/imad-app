@@ -100,13 +100,13 @@ function propertyregister_fun()
       document.getElementById('property_register').style.display="block";
       
      */
-     var namex=document.getElementById('plld').value;
+     var name=document.getElementById('plld').value;
      var size=document.getElementById('property_size').value;
     var  parea=document.getElementById('property_city').value;
      var des=document.getElementById('pdesc').value;
        var ptype=document.getElementById('property_type');
     var choice = ptype.options[ptype.selectedIndex].text;
-    var s="/hello1/"+namex+"$"+choice+"$"+parea+"$"+size+"$"+des;
+    var s="/hello1/"+name+"$"+choice+"$"+parea+"$"+size+"$"+des;
     
     var xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function() {
