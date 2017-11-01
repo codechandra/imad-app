@@ -125,7 +125,7 @@ function sellerregister_form()
      parea=document.getElementById('property_city').value;
       des=document.getElementById('pdesc').value;
         ptype=document.getElementById('property_type');
-    var choice = group.options[group.selectedIndex].text;
+    var choice = ptype.options[group.selectedIndex].text;
       alert(des);
       alert(choice);
     
