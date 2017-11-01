@@ -89,6 +89,17 @@ function b()
       document.getElementById('buyer_register').style.display="block";
        document.getElementById('seller_register').style.display="none";
 }
+function propertyregister_fun()
+{
+    document.getElementById('login').style.display="none";
+     document.getElementById('register').style.display="block";
+     document.getElementById('home').style.display="none";
+      document.getElementById('aboutus').style.display="none";
+     document.getElementById('contact').style.display="none";
+     document.getElementById('an').style.display="none";
+      document.getElementById('property_register').style.display="block";
+     
+}
 var s;
 function buyerregister_form()
 {
@@ -140,9 +151,10 @@ xhttp.onreadystatechange = function() {
        // Typical action to be performed when the document is ready:
        //document.getElementById("demo").innerHTML = xhttp.responseText;
       // alert("Thank you "+xhttp.responseText+" You've successfullly registered as a seller on E-estate.please login to see your profile");
-          //  login_fun();    
-         document.getElementById('id01').style.display='block';
-         document.getElementById('set').innerHTML=xhttp.responseText+" You've successfully registered as a seller on E-estate";
+          //  login_fun();
+          propertyregister_fun();
+         //document.getElementById('id01').style.display='block';
+         //document.getElementById('set').innerHTML=xhttp.responseText+" You've successfully registered as a seller on E-estate";
     }
 };
 xhttp.open("GET", s, true);
