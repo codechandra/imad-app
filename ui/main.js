@@ -137,8 +137,10 @@ xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
        // Typical action to be performed when the document is ready:
        //document.getElementById("demo").innerHTML = xhttp.responseText;
-       alert("Thank you "+xhttp.responseText+" You've successfullly registered as a seller on E-estate.please login to see your profile");
-            login_fun();       
+      // alert("Thank you "+xhttp.responseText+" You've successfullly registered as a seller on E-estate.please login to see your profile");
+          //  login_fun();    
+         document.getElementById('id01').style.display='block';
+         document.getElementById('set').innerHTML=xhttp.responseText;
     }
 };
 xhttp.open("GET", s, true);
