@@ -123,7 +123,7 @@ function sellerregister_form()
     password=document.getElementById('seller_password').value;
      size=document.getElementById('property_size').value;
      parea=document.getElementById('property_city').value;
-      des=document.getElementById('p_desc').value;
+      des=document.getElementById('pdesc').value;
       //alert(des);
     
     //window.alert(name+contact+email+password);
