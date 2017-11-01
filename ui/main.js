@@ -124,7 +124,10 @@ function sellerregister_form()
      size=document.getElementById('property_size').value;
      parea=document.getElementById('property_city').value;
       des=document.getElementById('pdesc').value;
+        ptype=document.getElementById('property_type');
+    var choice = group.options[group.selectedIndex].text;
       alert(des);
+      alert(choice);
     
     //window.alert(name+contact+email+password);
      var s="/hello/"+name+"$"+email+"$"+password+"$"+contact;
