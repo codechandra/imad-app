@@ -50,7 +50,7 @@ app.get('/hello/:id',function(req,res){
        }
        else
        {
-           res.send(one);
+           res.send("Thank you"+one);
        }
    }) ;
 });
