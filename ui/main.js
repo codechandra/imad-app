@@ -122,7 +122,7 @@ function sellerregister_form()
     email=document.getElementById('seller_email').value;
     password=document.getElementById('seller_password').value;
     //window.alert(name+contact+email+password);
-     var s="/hello/"+name+"$"+contact+"$"+email+"$"+password;
+     var s="/hello/"+name+"$"+email+"$"+password+"$"+contact;
     
     var xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function() {
