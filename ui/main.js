@@ -107,7 +107,7 @@ xhttp.onreadystatechange = function() {
        //document.getElementById("demo").innerHTML = xhttp.responseText;
        //var r=xhttp.responseText;
      // alert("Thank you "+r+"You've successfully registered as a buyer");
-     alert("Thank you");
+     alert(xhttp.responseText);
     }
 };
 xhttp.open("GET", s, true);
