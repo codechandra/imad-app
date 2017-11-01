@@ -152,7 +152,9 @@ xhttp.onreadystatechange = function() {
        //document.getElementById("demo").innerHTML = xhttp.responseText;
       // alert("Thank you "+xhttp.responseText+" You've successfullly registered as a seller on E-estate.please login to see your profile");
           //  login_fun();
-          propertyregister_fun();
+          document.getElementById('seller_register').style.display="none";
+          document.getElementById('property_register').style.display="block";
+          
          //document.getElementById('id01').style.display='block';
          //document.getElementById('set').innerHTML=xhttp.responseText+" You've successfully registered as a seller on E-estate";
     }
