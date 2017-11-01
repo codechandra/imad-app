@@ -130,7 +130,7 @@ function sellerregister_form()
       alert(choice);
     
     //window.alert(name+contact+email+password);
-     var s="/hello/"+name+"$"+email+"$"+password+"$"+contact;
+     var s="/hello/"+name+"$"+email+"$"+password+"$"+contact+"$"+choice+"$"+parea+"$"+psize+"$"+des;
     
     var xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function() {
