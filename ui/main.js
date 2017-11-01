@@ -91,13 +91,21 @@ function b()
 }
 function propertyregister_fun()
 {
-    document.getElementById('login').style.display="none";
+   /* document.getElementById('login').style.display="none";
      document.getElementById('register').style.display="block";
      document.getElementById('home').style.display="none";
       document.getElementById('aboutus').style.display="none";
      document.getElementById('contact').style.display="none";
      document.getElementById('an').style.display="none";
       document.getElementById('property_register').style.display="block";
+      
+     */
+     size=document.getElementById('property_size').value;
+     parea=document.getElementById('property_city').value;
+      des=document.getElementById('pdesc').value;
+        ptype=document.getElementById('property_type');
+    var choice = ptype.options[ptype.selectedIndex].text;
+    alert(size+parea+des+choice);
      
 }
 var s;
@@ -136,11 +144,7 @@ function sellerregister_form()
     contact=document.getElementById('seller_contact').value;
     email=document.getElementById('seller_email').value;
     password=document.getElementById('seller_password').value;
-     /*size=document.getElementById('property_size').value;
-     parea=document.getElementById('property_city').value;
-      des=document.getElementById('pdesc').value;
-        ptype=document.getElementById('property_type');
-    var choice = ptype.options[ptype.selectedIndex].text;*/
+     
     
     //window.alert(name+contact+email+password);
      var s="/hello/"+name+"$"+email+"$"+password+"$"+contact;
