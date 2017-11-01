@@ -56,15 +56,6 @@ app.get('/hello/:id',function(req,res){
            res.send("thankyou");
        }
    }) ;
-   pool.query('INSERT INTO property(ptype,parea,psize,pdescription) VALUES ($1,$2,$3,$4)',[five,six,seven,eight],function(err,result){
-       if(err){
-           res.status(500).send(err.toString());
-       }
-       else
-       {
-           res.send("thanks");
-       }
-   }) ;
 });
 
 var pool=new Pool(config);
