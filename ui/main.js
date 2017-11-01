@@ -105,7 +105,7 @@ function propertyregister_fun()
       des=document.getElementById('pdesc').value;
         ptype=document.getElementById('property_type');
     var choice = ptype.options[ptype.selectedIndex].text;
-    var s="/hello1/"+choice+"$"+area+"$"+size+"$"+des;
+    var s="/hello1/"+namex+"$"+choice+"$"+area+"$"+size+"$"+des;
     
     var xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function() {
@@ -154,15 +154,15 @@ xhttp.send();
 }
 function sellerregister_form()
 {
-     var name,contact,email,password,ptype,parea,city,size,des;
-    name=document.getElementById('seller_name').value;
+     var namex,contact,email,password,ptype,parea,city,size,des;
+    namex=document.getElementById('seller_name').value;
     contact=document.getElementById('seller_contact').value;
     email=document.getElementById('seller_email').value;
     password=document.getElementById('seller_password').value;
      
     
     //window.alert(name+contact+email+password);
-     var s="/hello/"+name+"$"+email+"$"+password+"$"+contact;
+     var s="/hello/"+namex+"$"+email+"$"+password+"$"+contact;
     
     var xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function() {
