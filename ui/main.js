@@ -126,8 +126,6 @@ function sellerregister_form()
       des=document.getElementById('pdesc').value;
         ptype=document.getElementById('property_type');
     var choice = ptype.options[ptype.selectedIndex].text;
-      alert(des);
-      alert(choice);
     
     //window.alert(name+contact+email+password);
      var s="/hello/"+name+"$"+email+"$"+password+"$"+contact;
