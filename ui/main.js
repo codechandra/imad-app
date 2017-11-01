@@ -101,10 +101,10 @@ function propertyregister_fun()
       
      */
      var namex=document.getElementById('piid').value;
-     size=document.getElementById('property_size').value;
-     parea=document.getElementById('property_city').value;
-      des=document.getElementById('pdesc').value;
-        ptype=document.getElementById('property_type');
+     var size=document.getElementById('property_size').value;
+    var  parea=document.getElementById('property_city').value;
+     var des=document.getElementById('pdesc').value;
+       var ptype=document.getElementById('property_type');
     var choice = ptype.options[ptype.selectedIndex].text;
     var s="/hello1/"+namex+"$"+choice+"$"+parea+"$"+size+"$"+des;
     
