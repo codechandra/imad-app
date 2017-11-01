@@ -42,7 +42,7 @@ app.get('/hello/:id',function(req,res){
     var one=(m[0]);
     var two=(m[1]);
     var three=m[2];
-    var four=m[3];
+    var four=parseInt(m[3]);
     pool.query('INSERT INTO seller(sname,semail,spassword,smobile) VALUES ($1,$2,$3,$4)',[one,two,three,four],function(err,result){
        if(err){
            res.status(500).send(err.toString());
