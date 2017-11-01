@@ -105,8 +105,9 @@ xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
        // Typical action to be performed when the document is ready:
        //document.getElementById("demo").innerHTML = xhttp.responseText;
-       var r=xhttp.responseText;
-      alert("Thank you "+r+"You've successfully registered as a buyer");
+       //var r=xhttp.responseText;
+     // alert("Thank you "+r+"You've successfully registered as a buyer");
+     alert("Thank you");
     }
 };
 xhttp.open("GET", s, true);
