@@ -114,3 +114,7 @@ xhttp.send();
     
     
 }
+function sellerregister_form()
+{
+    alert("hai");
+}
