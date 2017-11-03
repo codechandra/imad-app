@@ -31,9 +31,9 @@ xhttp.onreadystatechange = function() {
      // alert("Thank you "+r+"You've successfully registered as a buyer");
    // alert("Thank you "+xhttp.responseText+" You've successfullly registered as a buyer on E-estate.please login to see your profile");
     //  login_fun();
-     document.getElementById('id01').style.display='block';
-         document.getElementById('set').innerHTML=xhttp.responseText[0]+" You've successfully registered as a seller on E-estate";
-        // alert(xhttp.responseText);
+     /*document.getElementById('id01').style.display='block';
+         document.getElementById('set').innerHTML=xhttp.responseText[0]+" You've successfully registered as a seller on E-estate";*/
+         window.alert(xhttp.responseText);
     }
 };
 xhttp.open("GET", s, true);
