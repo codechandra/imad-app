@@ -45,7 +45,7 @@ app.get('/hai1/:id',function(req,res){
     var three=m[2];
     if(m[2]==1)
     {
-         pool.query('SELECT *FROM customer where (cmail=one AND cpassword=two)',function(err,result){
+         pool.query('SELECT *FROM customer where (cmail=m[0] AND cpassword=m[1])',function(err,result){
        if(err){
            res.status(500).send(err.toString());
        }
