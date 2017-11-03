@@ -19,7 +19,24 @@ function login_form()
     login_type=2;
      else if(document.getElementById('admin').checked)
      login_type=3;
-     alert(uname+pwd+login_type);
+     //alert(uname+pwd+login_type);
+     var s="/hai1/"+uname+"$"+pwd+"$"+login_type;
+    
+    var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+       // Typical action to be performed when the document is ready:
+       //document.getElementById("demo").innerHTML = xhttp.responseText;
+       //var r=xhttp.responseText;
+     // alert("Thank you "+r+"You've successfully registered as a buyer");
+   // alert("Thank you "+xhttp.responseText+" You've successfullly registered as a buyer on E-estate.please login to see your profile");
+    //  login_fun();
+     document.getElementById('id01').style.display='block';
+         document.getElementById('set').innerHTML=xhttp.responseText+" You've successfully registered as a seller on E-estate";
+    }
+};
+xhttp.open("GET", s, true);
+xhttp.send();
     
     
     
