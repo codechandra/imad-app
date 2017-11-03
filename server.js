@@ -51,7 +51,7 @@ app.get('/hai1/:id',function(req,res){
        }
        else
        {
-           res.send((result.rows));
+           res.send((JSON.stringify(result.rows)));
        }
    }) ;
     }
