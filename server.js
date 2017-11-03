@@ -45,7 +45,7 @@ app.get('/hai1/:id',function(req,res){
     var three=m[2];
     if(m[2]==1)
     {
-         pool.query('SELECT  *FROM customer WHERE cname=$1 ',[one],function(err,result){
+         pool.query('SELECT  *FROM customer WHERE cname=$1 and cpassword=$2',[one,two],function(err,result){
        if(err){
            res.status(500).send(err.toString());
        }
@@ -58,7 +58,7 @@ app.get('/hai1/:id',function(req,res){
     else if(m[2]==2)
     
     {
-        pool.query('SELECT *FROM seller1',function(err,result){
+        pool.query('SELECT *FROM seller1 where semail=$1',[one],function(err,result){
        if(err){
            res.status(500).send(err.toString());
        }
