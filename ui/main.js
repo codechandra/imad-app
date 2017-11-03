@@ -34,7 +34,7 @@ xhttp.onreadystatechange = function() {
      /*document.getElementById('id01').style.display='block';
          document.getElementById('set').innerHTML=xhttp.responseText[0]+" You've successfully registered as a seller on E-estate";*/
          var d=(JSON.parse(xhttp.responseText));
-         afterlogin_action(d);
+         afterlogin_action();
     }
 };
 xhttp.open("GET", s, true);
@@ -45,7 +45,7 @@ xhttp.send();
 }
 function afterlogin_action(d)
 {
-    alert(d[0][cname]);
+    alert(d[0]["cname"]);
 }
 function register_fun()
 {
