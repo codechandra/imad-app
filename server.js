@@ -37,6 +37,29 @@ app.get('/hai/:id',function(req,res){
        }
    }) ;
 });
+app.get('/hai1/:id',function(req,res){
+    var value=req.params.id;
+    var m=value.split('$');
+    var one=(m[0]);
+    var two=(m[1]);
+    var three=m[2];
+    if(m[2]==1)
+    res.send("buyer");
+    else if(m[2]==2)
+    res.send("seller");
+    else
+    res.send("admin");
+   /* pool.query('SELECT  customer(cname,cmail,cmobile,cpassword) VALUES ($1,$2,$3,$4)',[one,two,three,four],function(err,result){
+       if(err){
+           res.status(500).send(err.toString());
+       }
+       else
+       {
+          
+           res.send(one);
+       }
+   }) ;*/
+});
 app.get('/hello/:id',function(req,res){
     var value=req.params.id;
     var m=value.split('$');
