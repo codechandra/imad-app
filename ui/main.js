@@ -33,7 +33,7 @@ xhttp.onreadystatechange = function() {
     //  login_fun();
      /*document.getElementById('id01').style.display='block';
          document.getElementById('set').innerHTML=xhttp.responseText[0]+" You've successfully registered as a seller on E-estate";*/
-         window.alert(xhttp.responseText);
+         window.alert(JSON.parse(xhttp.responseText));
     }
 };
 xhttp.open("GET", s, true);
