@@ -40,8 +40,8 @@ app.get('/hai/:id',function(req,res){
 app.get('/hai1/:id',function(req,res){
     var value=req.params.id;
     var m=value.split('$');
-    var one=(m[0]).toString();
-    var two=parseInt(m[1]);
+    var one=(m[0]);
+    var two=(m[1]);
     var three=m[2];
     if(m[2]==1)
     {
