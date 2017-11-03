@@ -44,11 +44,42 @@ app.get('/hai1/:id',function(req,res){
     var two=(m[1]);
     var three=m[2];
     if(m[2]==1)
-    res.send("buyer");
+    {
+         pool.query('SELECT *FROM customer',function(err,result){
+       if(err){
+           res.status(500).send(err.toString());
+       }
+       else
+       {
+           res.send(JSON.stringify(result.rows));
+       }
+   }) ;
+    }
     else if(m[2]==2)
-    res.send("seller");
+    
+    {
+        pool.query('SELECT *FROM seller1',function(err,result){
+       if(err){
+           res.status(500).send(err.toString());
+       }
+       else
+       {
+           res.send(JSON.stringify(result.rows));
+       }
+   }) ;
+    }
     else
-    res.send("admin");
+    {
+        pool.query('SELECT *FROM admin',function(err,result){
+       if(err){
+           res.status(500).send(err.toString());
+       }
+       else
+       {
+           res.send(JSON.stringify(result.rows));
+       }
+   }) ;
+    }
    /* pool.query('SELECT  customer(cname,cmail,cmobile,cpassword) VALUES ($1,$2,$3,$4)',[one,two,three,four],function(err,result){
        if(err){
            res.status(500).send(err.toString());
