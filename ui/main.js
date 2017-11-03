@@ -8,6 +8,22 @@ function login_fun()
      document.getElementById('an').style.display="none";
      
 }
+function login_form()
+{
+    var uname=document.getElementById('username').value;
+     var pwd=document.getElementById('password').value;
+    var login_type;
+    if(document.getElementById('buyer').checked)
+    login_type=1;
+    else if(document.getElementById('seller').checked)
+    login_type=2;
+     else if(document.getElementById('admin').checked)
+     login_type=3;
+     alert(uname+pwd+login_type);
+    
+    
+    
+}
 function register_fun()
 {
      document.getElementById('login').style.display="none";
