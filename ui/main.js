@@ -46,6 +46,15 @@ xhttp.send();
 function afterlogin_action(d)
 {
     document.getElementById('login').style.display="none";
+     document.getElementById('register').style.display="none";
+     document.getElementById('home').style.display="none";
+      document.getElementById('aboutus').style.display="none";
+     document.getElementById('contact').style.display="none";
+     document.getElementById('an').style.display="none";
+     document.getElementById('title').style.display="none";
+     document.getElementById('navigation_bar').style.display="none";
+     
+    document.getElementById('login').style.display="none";
     document.getElementById('loginpage').style.display="block";
     document.getElementById('login_name').innerHTML=d[0]["cname"];
      document.getElementById('login_email').innerHTML=d[0]["cmail"];
