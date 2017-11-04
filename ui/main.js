@@ -61,7 +61,7 @@ function afterlogin_action(d)
      
     document.getElementById('login').style.display="none";
     document.getElementById('loginpage').style.display="block";
-    document.getElementById('login_name').innerHTML=d[0]["cname"];
+    document.getElementById('login_name').innerHTML="HI, "+d[0]["cname"];
      document.getElementById('login_email').innerHTML=d[0]["cmail"];
       document.getElementById('login_number').innerHTML=d[0]["cmobile"];
 }
