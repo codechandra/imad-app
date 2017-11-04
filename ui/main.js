@@ -240,3 +240,21 @@ xhttp.onreadystatechange = function() {
 xhttp.open("GET", s, true);
 xhttp.send();
 }
+function customer_update()
+{
+    document.getElementById('customerupdate').style.display='block';
+    document.getElementById('customerbook').style.display='none';
+    document.getElementById('cancelproperty').style.display='none';
+}
+function customer_bookproperty()
+{
+     document.getElementById('customerupdate').style.display='none';
+    document.getElementById('customerbook').style.display='block';
+    document.getElementById('cancelproperty').style.display='none';
+}
+function customer_cancelproperty()
+{
+    document.getElementById('customerupdate').style.display='none';
+    document.getElementById('customerbook').style.display='none';
+    document.getElementById('cancelproperty').style.display='block'; 
+}
