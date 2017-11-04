@@ -6,7 +6,7 @@ function login_fun()
       document.getElementById('aboutus').style.display="none";
      document.getElementById('contact').style.display="none";
      document.getElementById('an').style.display="none";
-     document.getElementById('footer_bar').style.display="none";
+     document.getElementById('footer').style.display="none";
      
 }
 function login_form()
