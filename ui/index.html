@@ -45,10 +45,11 @@
         </title>
     </head>
     <body>
-  
+  <!--TITLE BAR-->
         <div class="w3-container w3-teal" id="title">
             <h1  style=" font-family:Audiowide;" class=" w3-center w3-left w3-jumbo">E-estate</h1>
         </div>
+        <!-- NAVIGATION OPTIONS-->
         <div id="navigation_bar" class="w3-bar w3-border w3-text-white " style="background-color:#212121">
   <a href="javascript:home_fun()" class="w3-bar-item w3-button w3-hover-teal">HOME</a>
   <a href="javascript:aboutus_fun()" class="w3-bar-item w3-button w3-hover-teal">ABOUT US</a>
@@ -57,6 +58,7 @@
   <a href="javascript:login_fun()" class="w3-bar-item w3-button w3-hover-teal w3-right">LOGIN</a>
    <a href="javascript:register_fun()" class="w3-bar-item w3-button w3-hover-teal w3-right">REGISTER</a>
 </div>
+<!-- HOME PAGE-->
 <div style="display:block" id="home" class="w3-container w3-center">
     <h1  style="font-size:90px;font-family: 'Baloo Bhai', cursive;">How we work??</h1>
     
@@ -88,6 +90,7 @@
     <h1  style="font-size:90px;font-family: 'Baloo Bhai', cursive;" >About us</h1>
     <h3>E-estate is one of the leading online real estate platforms with more than a decade of experience in the real estate field.E-estate is founded by Maneesha and her friends in the year 2008 with an intention of making the real estate transactions more reliable.E-estate aims at providing an effecient and most effective way for both sellers and buyers to find the other.Our atmost priority is the genuinity of the property and trustworthyness of buyers.We are striving hard to make this possible</h3>
 </div>
+<!--CONTACT US-->
 <div id="contact" class="w3-container" style="display:none">
     <div class="w3-left">
    <a href="#" class="fa fa-facebook"></a><br>
@@ -126,9 +129,11 @@
    </div>
    </div>
 </div>
+<!--REGISTRATION FORMS FOR BUYERS AND SELLERS-->
 <div style="display:none" id="register" class="w3-conatiner w3-center">
     <button class="w3-btn w3-teal" onclick="this.style.backgroundColor = '#ffffff';register_buyer()">Buyer</button>
         <button onclick="register_seller()" class="w3-btn w3-teal">Seller</button>
+        <!--BUYER REGISTRATION FORM-->
         <div class="w3-container w3-center" style="display:none" id="buyer_register">
         <fieldset>
              <legend>Buyer Registration</legend>
@@ -140,6 +145,7 @@
             <button class="w3-btn w3-teal"  onclick="buyerregister_form()">Register</button>
         
         </div>
+        <!--SELLER REGISTRATION FORM-->
         <div class="w3-container w3-center" style="display:none" id="seller_register" >
             <fieldset>
                 <legend>Seller Registration</legend>
@@ -154,6 +160,7 @@
             
         </div>
 </div>
+<!--MODAL TO DISPLAY GREETINGS AFTER REGISTRATION-->
   <div id="id01" class="w3-modal">
     <div class="w3-modal-content w3-animate-top w3-card-4">
       <header class="w3-container w3-teal"> 
@@ -171,6 +178,7 @@
       </footer>
     </div>
   </div>
+  <!--PROPERTY  REGISTRATION-->
   <div id="property_register" class="w3-container w3-center" style="display:none">
     <fieldset>
                  <legend>
@@ -206,12 +214,11 @@
                 </fieldset>
                 <button class="w3-btn w3-teal" onclick="propertyregister_fun()">Register</button>
   </div>
-  <!--AFTER LOGIN-->
+  <!--AFTER BUYER LOGIN-->
   <div id="loginpage" class="w3-container" style="display:none">
       <h1 class="w3-container w3-teal" id="login_name"></h1>
       <h3 id="login_email"></h3>
       <h3 id="login_number"></h3>
-      
   </div>
     </body>
 </html>
