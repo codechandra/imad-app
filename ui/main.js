@@ -35,7 +35,7 @@ xhttp.onreadystatechange = function() {
          document.getElementById('set').innerHTML=xhttp.responseText[0]+" You've successfully registered as a seller on E-estate";*/
          var d=(JSON.parse(xhttp.responseText));
          //afterlogin_action(d);
-         // document.getElementById('login').style.display="none";
+          document.getElementById('login').style.display="none";
     document.getElementById('loginpage').style.display="block";
     document.getElementById('login_name').innerHTML=d[0]["cname"];
      document.getElementById('login_email').innerHTML=d[0]["cmail"];
