@@ -130,19 +130,24 @@
     <button class="w3-btn w3-teal" onclick="this.style.backgroundColor = '#ffffff';register_buyer()">Buyer</button>
         <button onclick="register_seller()" class="w3-btn w3-teal">Seller</button>
         <div class="w3-container w3-center" style="display:none" id="buyer_register">
-    
+        <fieldset>
+             <legend>Buyer Registration</legend>
             <input class="w3-hover-pale-blue" style="margin-bottom:5px;margin-top:5px" type="text" id="buyer_name" placeholder="Enter your name"><br>
             <input class="w3-hover-pale-blue" style="margin-bottom:5px" type="number" id="buyer_contact" placeholder="Contact number" maxlength="10"><br>
             <input class="w3-hover-pale-blue" style="margin-bottom:5px" type="email" id="buyer_email" placeholder="Enter your email"><br>
              <input class="w3-hover-pale-blue" style="margin-bottom:5px" type="password" id="buyer_password" placeholder="Choose a password"><br>
+             ></fieldset>
             <button class="w3-btn w3-teal"  onclick="buyerregister_form()">Register</button>
         
         </div>
         <div class="w3-container w3-center" style="display:none" id="seller_register" >
+            <fieldset>
+                <legend>Seller Registration</legend>
             <input class="w3-hover-pale-blue" style="margin-bottom:5px;margin-top:5px" type="text" id="seller_name" placeholder="Enter your name"><br>
             <input class="w3-hover-pale-blue" style="margin-bottom:5px" type="number" id="seller_contact" placeholder="Contact number"><br>
             <input class="w3-hover-pale-blue" style="margin-bottom:5px" type="email" id="seller_email" placeholder="Enter your email"><br>
              <input class="w3-hover-pale-blue" style="margin-bottom:5px" type="password" id="seller_password" placeholder="Choose a password"><br>
+             </fieldset>
             
            
             <button style="margin-bottom:5px;margin-top:5px" class="w3-btn w3-teal" onclick="sellerregister_form()">Register</button>
