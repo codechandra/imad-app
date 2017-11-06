@@ -245,6 +245,8 @@ function customer_update()
     document.getElementById('customerupdate').style.display='block';
     document.getElementById('customerbook').style.display='none';
     document.getElementById('cancelproperty').style.display='none';
+    document.getElementById('login_main_display').style.display='none';
+    
 }
 function customer_bookproperty()
 {
@@ -266,7 +268,7 @@ function customer_logout()
       document.getElementById('loginpage').style.display='none'; 
       document.getElementById('title').style.display="block";
      document.getElementById('navigation_bar').style.display="block";
-      window.alert("you are successfully logged out");
+      window.alert("you've successfully logged out");
        home_fun();
      // alert("You've successfully logged out");
 }
