@@ -258,3 +258,11 @@ function customer_cancelproperty()
     document.getElementById('customerbook').style.display='none';
     document.getElementById('cancelproperty').style.display='block'; 
 }
+function customer_logout()
+{
+    document.getElementById('customerupdate').style.display='none';
+    document.getElementById('customerbook').style.display='none';
+    document.getElementById('cancelproperty').style.display='none'; 
+      document.getElementById('home').style.display='block'; 
+      alert("You've successfully logged out");
+}
