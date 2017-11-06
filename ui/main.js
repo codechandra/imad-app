@@ -266,7 +266,7 @@ function customer_cancelproperty()
 }
 function customer_logout()
 {
-    if(confirm("Are you sure??")==true)
+    if(confirm("Are you sure?? Do you want to logout??")==true)
       {
            document.getElementById('customerupdate').style.display='none';
     document.getElementById('customerbook').style.display='none';
