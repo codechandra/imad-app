@@ -242,6 +242,10 @@ xhttp.onreadystatechange = function() {
 xhttp.open("GET", s, true);
 xhttp.send();
 }
+function customer_home()
+{
+     document.getElementById('login_main_display').style.display='block';
+}
 function customer_update()
 {
     document.getElementById('customerupdate').style.display='block';
