@@ -253,7 +253,7 @@ function customer_update()
 function customer_bookproperty()
 {
      document.getElementById('login_main_display').style.display='none';
-    document.getElementById('login_main_display').style.display='block';
+    document.getElementById('login_main_display').style.display='none';
      document.getElementById('customerupdate').style.display='none';
     document.getElementById('customerbook').style.display='block';
     document.getElementById('cancelproperty').style.display='none';
