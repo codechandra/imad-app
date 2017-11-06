@@ -276,3 +276,12 @@ function customer_logout()
        home_fun();
      // alert("You've successfully logged out");
 }
+function oncustomer_profile_update()
+{
+    var name=document.getElementById('updated_customer_name').value;
+    var mobile=document.getElementById('updated_customer_mobile').value;
+    var email=document.getElementById('updated_customer_email').value;
+    var password=document.getElementById('updated_customer_password').value;
+    window.alert(name+mobile+email+password);
+    
+}
