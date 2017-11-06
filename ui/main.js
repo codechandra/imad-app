@@ -267,5 +267,6 @@ function customer_logout()
       document.getElementById('title').style.display="block";
      document.getElementById('navigation_bar').style.display="block";
       home_fun();
+      window.alert("you are successfully logged out");
      // alert("You've successfully logged out");
 }
