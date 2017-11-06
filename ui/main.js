@@ -272,8 +272,12 @@ function customer_logout()
       document.getElementById('loginpage').style.display='none'; 
       document.getElementById('title').style.display="block";
      document.getElementById('navigation_bar').style.display="block";
-      window.alert("you've successfully logged out");
-       home_fun();
+      //window.alert("you've successfully logged out");
+      if(confirm("Are you sure??")==true)
+      {
+         home_fun(); 
+      }
+       
      // alert("You've successfully logged out");
 }
 function oncustomer_profile_update()
