@@ -268,14 +268,15 @@ function customer_logout()
 {
     if(confirm("Are you sure??")==true)
       {
-         home_fun(); 
-      }
-    document.getElementById('customerupdate').style.display='none';
+           document.getElementById('customerupdate').style.display='none';
     document.getElementById('customerbook').style.display='none';
     document.getElementById('cancelproperty').style.display='none'; 
       document.getElementById('loginpage').style.display='none'; 
       document.getElementById('title').style.display="block";
      document.getElementById('navigation_bar').style.display="block";
+         home_fun(); 
+      }
+   
       //window.alert("you've successfully logged out");
       
       
