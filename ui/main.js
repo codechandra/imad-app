@@ -264,6 +264,6 @@ function customer_logout()
     document.getElementById('customerbook').style.display='none';
     document.getElementById('cancelproperty').style.display='none'; 
       document.getElementById('loginpage').style.display='none'; 
-      window.open("/");
+      document.getElementById('login').style.dispplay='block';
       alert("You've successfully logged out");
 }
