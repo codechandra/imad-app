@@ -266,6 +266,10 @@ function customer_cancelproperty()
 }
 function customer_logout()
 {
+    if(confirm("Are you sure??")==true)
+      {
+         home_fun(); 
+      }
     document.getElementById('customerupdate').style.display='none';
     document.getElementById('customerbook').style.display='none';
     document.getElementById('cancelproperty').style.display='none'; 
@@ -273,12 +277,8 @@ function customer_logout()
       document.getElementById('title').style.display="block";
      document.getElementById('navigation_bar').style.display="block";
       //window.alert("you've successfully logged out");
-      if(confirm("Are you sure??")==true)
-      {
-         home_fun(); 
-      }
-      else
-      var x=x+2;
+      
+      
        
      // alert("You've successfully logged out");
 }
