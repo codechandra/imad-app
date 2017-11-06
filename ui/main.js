@@ -22,7 +22,8 @@ function login_form()
      login_type=3;
      //alert(uname+pwd+login_type);
      var s="/hai1/"+uname+"$"+pwd+"$"+login_type;
-    
+    if(login_type==1)
+    {
     var xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
@@ -45,6 +46,7 @@ xhttp.onreadystatechange = function() {
 };
 xhttp.open("GET", s, true);
 xhttp.send();
+}
     
     
     
