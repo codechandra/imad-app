@@ -263,6 +263,9 @@ function customer_cancelproperty()
     document.getElementById('customerupdate').style.display='none';
     document.getElementById('customerbook').style.display='none';
     document.getElementById('cancelproperty').style.display='block'; 
+    if(confirm("Do you want to cancel booked property??")==true)
+    window.alert("Booked property has been cancelled");
+    
 }
 function customer_logout()
 {
