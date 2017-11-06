@@ -277,6 +277,8 @@ function customer_logout()
       {
          home_fun(); 
       }
+      else
+      var x=x+2;
        
      // alert("You've successfully logged out");
 }
