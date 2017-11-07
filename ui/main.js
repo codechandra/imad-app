@@ -81,9 +81,9 @@ function after_seller_login_action(d)
      
     document.getElementById('login').style.display="none";
     document.getElementById('after_seller_login').style.display="block";
-    document.getElementById('seller_login_name').innerHTML="HI, "+d[0]["cname"];
-     document.getElementById('seller_login_email').innerHTML=d[0]["cmail"];
-      document.getElementById('seller_login_number').innerHTML=d[0]["cmobile"];
+    document.getElementById('seller_login_name').innerHTML="HI, "+d[0]["sname"];
+     document.getElementById('seller_login_email').innerHTML=d[0]["semail"];
+      document.getElementById('seller_login_number').innerHTML=d[0]["smobile"];
     
 }
 function afterlogin_action(d)
