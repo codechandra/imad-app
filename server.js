@@ -128,7 +128,7 @@ app.get('/hello1/:id',function(req,res){
 });
 app.get('/update/:id',function(req,res){
     var value=req.params.id;
-    res.send("Thank you");
+    res.send(value);
   
 });
 var pool=new Pool(config);
