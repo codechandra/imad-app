@@ -279,20 +279,20 @@ xhttp.send();
 }
 function seller_home()
 {
-     document.getElementById('login_seller__main_display').style.display='block';
+     document.getElementById('login_seller_main_display').style.display='block';
 }
 function seller_update()
 {
     document.getElementById('seller_updateprofile').style.display="block";
      document.getElementById('seller_add_property').style.display="none";
       document.getElementById('seller_remove_property').style.display="none";
-           document.getElementById('login_seller__main_display').style.display="none";
+           document.getElementById('login_seller_main_display').style.display="none";
      
     
 }
 function seller_addproperty()
 {
-    document.getElementById('login_seller__main_display').style.display="none";
+    document.getElementById('login_seller_main_display').style.display="none";
      document.getElementById('seller_updateprofile').style.display="none";
      document.getElementById('seller_add_property').style.display="block";
       document.getElementById('seller_remove_property').style.display="none";
@@ -302,7 +302,7 @@ function seller_removeproperty()
      document.getElementById('seller_updateprofile').style.display="none";
      document.getElementById('seller_add_property').style.display="none";
       document.getElementById('seller_remove_property').style.display="block";
-           document.getElementById('login_seller__main_display').style.display="none";
+           document.getElementById('login_seller_main_display').style.display="none";
 }
 function seller_logout()
 {
