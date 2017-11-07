@@ -280,8 +280,6 @@ xhttp.send();
 function seller_home()
 {
      document.getElementById('login_seller__main_display').style.display='block';
-     
-    
 }
 function seller_update()
 {
@@ -312,7 +310,6 @@ function customer_home()
 {
      document.getElementById('login_main_display').style.display='block';
 }
-function 
 function customer_update()
 {
     document.getElementById('customerupdate').style.display='block';
