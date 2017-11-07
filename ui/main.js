@@ -186,7 +186,7 @@ function b()
 }
 function propertyregister_fun()
 {
-     var namee=document.getElementById('piid').value;
+     var namee=document.getElementById('property_id').value;
      var size=document.getElementById('property_size').value;
     var  parea=document.getElementById('property_city').value;
      var des=document.getElementById('pdesc').value;
