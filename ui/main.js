@@ -201,23 +201,16 @@ function propertyregister_fun()
      var des=document.getElementById('pdesc').value;
        var ptype=document.getElementById('property_type');
     var choice = ptype.options[ptype.selectedIndex].text;
-    var s="/hello1/"+name+"$"+choice+"$"+parea+"$"+size+"$"+des;
-    
-    var xhttp = new XMLHttpRequest();
+    var s="/hello2/"+name+"$"+choice+"$"+parea+"$"+size+"$"+des;
+     var xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-       // Typical action to be performed when the document is ready:
-       //document.getElementById("demo").innerHTML = xhttp.responseText;
-       //var r=xhttp.responseText;
-     // alert("Thank you "+r+"You've successfully registered as a buyer");
-   // alert("Thank you "+xhttp.responseText+" You've successfullly registered as a buyer on E-estate.please login to see your profile");
-    //  login_fun();
-     document.getElementById('id01').style.display='block';
-         document.getElementById('set').innerHTML=xhttp.responseText+" You've successfully registered as a seller on E-estate";
+      alert(xhttp.responseText);
     }
 };
+xhttp.open("GET", s, true);
+xhttp.send();
     
-     
 }
 var s;
 function buyerregister_form()
