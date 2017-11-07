@@ -299,6 +299,20 @@ function oncustomer_profile_update()
     var password=document.getElementById('updated_customer_password').value;
     if(name==""||mobile==""||email==""||password=="")
     window.alert("please enter all the fields");
+    else
+    {
+         var s="/update/"+name+"$"+email+"$"+mobile+"$"+password;
+    
+    var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+       
+    }
+};
+xhttp.open("GET", s, true);
+xhttp.send();
+    }
+    }
 
     
 }
