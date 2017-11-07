@@ -312,6 +312,3 @@ xhttp.open("GET", s, true);
 xhttp.send();
     }
     }
-
-    
-}
