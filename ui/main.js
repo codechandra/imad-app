@@ -279,6 +279,10 @@ xhttp.send();
 }
 function seller_home()
 {
+    document.getElementById('seller_updateprofile').style.display="none";
+     document.getElementById('seller_add_property').style.display="none";
+      document.getElementById('seller_remove_property').style.display="none";
+           document.getElementById('login_seller_main_display').style.display="none";
      document.getElementById('login_seller_main_display').style.display='block';
 }
 function seller_update()
