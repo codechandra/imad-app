@@ -92,7 +92,7 @@ app.get('/hello/:id',function(req,res){
        }
    }) ;
 });
-app.get('/hello1/:id',function(req,res){
+app.get('/hello2/:id',function(req,res){
     var value=req.params.id;
     var m=value.split('$');
     var one=(m[0]);
