@@ -198,12 +198,15 @@ function propertyregister_fun()
      var xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-        alert(xhttp.responseText);
+        
+        document.getElementById('id011').style.display='block'
+        document.getElementById('one').style.display='Property-type: '+choice;
+          document.getElementById('two').style.display='Size: '+size;
+            document.getElementById('three').style.display='Location: '+parea;
+              document.getElementById('four').style.display='Description: '+des;
+        
     }
-    else
-    {
-        alert(xhttp.responseText);
-    }
+
 };
 xhttp.open("GET", s, true);
 xhttp.send();
