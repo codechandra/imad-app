@@ -192,18 +192,15 @@ function propertyregister_fun()
      var des=document.getElementById('pdesc').value;
        var ptype=document.getElementById('property_type');
     var choice = ptype.options[ptype.selectedIndex].text;
-    alert(name+size+parea+des+choice);
     var s="/hello2/"+namee+"$"+choice+"$"+parea+"$"+size+"$"+des;
-    alert(s+"  "+namee);
      var xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-        
         document.getElementById('id011').style.display='block'
-        document.getElementById('one').style.display='Property-type: '+choice;
-          document.getElementById('two').style.display='Size: '+size;
-            document.getElementById('three').style.display='Location: '+parea;
-              document.getElementById('four').style.display='Description: '+des;
+        document.getElementById('one').innerHTML='Property-type: '+choice;
+          document.getElementById('two').innerHTML='Size: '+size;
+            document.getElementById('three').innerHTML='Location: '+parea;
+              document.getElementById('four').innerHTML='Description: '+des;
         
     }
 
