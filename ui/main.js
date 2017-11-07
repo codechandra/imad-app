@@ -298,7 +298,7 @@ function oncustomer_profile_update()
     var email=document.getElementById('updated_customer_email').value;
     var password=document.getElementById('updated_customer_password').value;
     if(name==""||mobile==""||email==""||password=="")
-    window.akert("please enter all the fields");
+    window.alert("please enter all the fields");
 
     
 }
