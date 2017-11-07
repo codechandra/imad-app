@@ -128,6 +128,7 @@ app.get('/hello1/:id',function(req,res){
 });
 app.get('/update/:id',function(req,res){
     var value=req.params.id;
+     var m=value.split('$');
     var one=(m[0]);
     var two=(m[1]);
     var three=m[2];
