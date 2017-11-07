@@ -302,7 +302,6 @@ function oncustomer_profile_update()
     else
     {
          var s="/update/"+name+"$"+email+"$"+mobile+"$"+password;
-    
     var xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
