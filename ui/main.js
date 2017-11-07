@@ -196,7 +196,7 @@ function propertyregister_fun()
      var xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-        document.getElementById('id011').style.display='block'
+        document.getElementById('id011').style.display='block';
         document.getElementById('one').innerHTML='Property-type: '+choice;
           document.getElementById('two').innerHTML='Size: '+size;
             document.getElementById('three').innerHTML='Location: '+parea+'sq.ft';
