@@ -289,6 +289,7 @@ function seller_logout()
       }
     
 }
+
 function customer_home()
 {
      document.getElementById('login_main_display').style.display='block';
