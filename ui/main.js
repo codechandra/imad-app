@@ -297,9 +297,8 @@ function oncustomer_profile_update()
     var mobile=document.getElementById('updated_customer_mobile').value;
     var email=document.getElementById('updated_customer_email').value;
     var password=document.getElementById('updated_customer_password').value;
-    if(name!="")
-    window.alert(name);
-    else
-    window.alert("name is empty");
+    if(name==""||mobile==""||email==""||password=="")
+    window.akert("please enter all the fields");
+
     
 }
