@@ -186,13 +186,13 @@ function b()
 }
 function propertyregister_fun()
 {
-     var name=document.getElementById('plld').value;
+     var namee=document.getElementById('plld').value;
      var size=document.getElementById('property_size').value;
     var  parea=document.getElementById('property_city').value;
      var des=document.getElementById('pdesc').value;
        var ptype=document.getElementById('property_type');
     var choice = ptype.options[ptype.selectedIndex].text;
-    var s="/hello2/"+name+"$"+choice+"$"+parea+"$"+size+"$"+des;
+    var s="/hello2/"+namee+"$"+choice+"$"+parea+"$"+size+"$"+des;
      var xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
