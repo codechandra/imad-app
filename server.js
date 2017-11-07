@@ -126,6 +126,11 @@ app.get('/hello1/:id',function(req,res){
        }
    }) ;
 });
+app.get('/update/:id',function(req,res){
+    var value=req.params.id;
+    res.send("Thank you");
+  
+});
 var pool=new Pool(config);
 pool.connect();
 app.get('/test-db',function(req,res){
