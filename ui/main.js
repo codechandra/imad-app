@@ -186,15 +186,6 @@ function b()
 }
 function propertyregister_fun()
 {
-   /* document.getElementById('login').style.display="none";
-     document.getElementById('register').style.display="block";
-     document.getElementById('home').style.display="none";
-      document.getElementById('aboutus').style.display="none";
-     document.getElementById('contact').style.display="none";
-     document.getElementById('an').style.display="none";
-      document.getElementById('property_register').style.display="block";
-      
-     */
      var name=document.getElementById('plld').value;
      var size=document.getElementById('property_size').value;
     var  parea=document.getElementById('property_city').value;
@@ -205,7 +196,7 @@ function propertyregister_fun()
      var xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-
+        alert(xhttp.responseText);
     }
 };
 xhttp.open("GET", s, true);
