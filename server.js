@@ -128,7 +128,20 @@ app.get('/hello1/:id',function(req,res){
 });
 app.get('/update/:id',function(req,res){
     var value=req.params.id;
-    res.send(value);
+    var one=(m[0]);
+    var two=(m[1]);
+    var three=m[2];
+    var four=(m[3]);
+        pool.query('UPDATE customer SET cname=$1,cmail=$2,cmobile=$3,cpassword=$4 WHERE cmail=$5',[one,two,three,four,two],function(err,result){
+       if(err){
+           res.status(500).send(err.toString());
+       }
+       else
+       {
+           res.send("Thank you");
+       }
+   }) ;
+    
   
 });
 var pool=new Pool(config);
