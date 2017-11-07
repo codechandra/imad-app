@@ -199,7 +199,7 @@ xhttp.onreadystatechange = function() {
         document.getElementById('id011').style.display='block'
         document.getElementById('one').innerHTML='Property-type: '+choice;
           document.getElementById('two').innerHTML='Size: '+size;
-            document.getElementById('three').innerHTML='Location: '+parea;
+            document.getElementById('three').innerHTML='Location: '+parea+'sq.ft';
               document.getElementById('four').innerHTML='Description: '+des;
         
     }
