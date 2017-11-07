@@ -208,7 +208,6 @@ xhttp.onreadystatechange = function() {
 xhttp.open("GET", s, true);
 xhttp.send();
 }
-var s;
 function buyerregister_form()
 {
     var name,contact,email,password;
