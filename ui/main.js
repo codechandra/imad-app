@@ -277,6 +277,24 @@ xhttp.onreadystatechange = function() {
 xhttp.open("GET", s, true);
 xhttp.send();
 }
+function seller_home()
+{
+     document.getElementById('login_seller__main_display').style.display='block';
+     
+    
+}
+function seller_update()
+{
+    
+}
+function seller_addproperty()
+{
+    
+}
+function seller_removeproperty()
+{
+    
+}
 function seller_logout()
 {
     if(confirm("Are you sure?? Do you want to logout??")==true)
@@ -294,6 +312,7 @@ function customer_home()
 {
      document.getElementById('login_main_display').style.display='block';
 }
+function 
 function customer_update()
 {
     document.getElementById('customerupdate').style.display='block';
