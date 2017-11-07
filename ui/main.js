@@ -192,6 +192,7 @@ function propertyregister_fun()
      var des=document.getElementById('pdesc').value;
        var ptype=document.getElementById('property_type');
     var choice = ptype.options[ptype.selectedIndex].text;
+    alert(name+size+parea+des+choice);
     var s="/hello2/"+namee+"$"+choice+"$"+parea+"$"+size+"$"+des;
     alert(s+"  "+namee);
      var xhttp = new XMLHttpRequest();
