@@ -53,21 +53,8 @@ app.get('/hai1/:id',function(req,res){
    }) ;
     }
     else if(m[2]==2)
-    
     {
         pool.query('SELECT *FROM seller1 where semail=$1',[one],function(err,result){
-       if(err){
-           res.status(500).send(err.toString());
-       }
-       else
-       {
-           res.send(JSON.stringify(result.rows));
-       }
-   }) ;
-    }
-    else
-    {
-        pool.query('SELECT *FROM admin',function(err,result){
        if(err){
            res.status(500).send(err.toString());
        }
