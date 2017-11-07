@@ -307,6 +307,7 @@ xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
        alert("Your profile has been successfully updated");
        document.getElementById('login_main_display').style.display='block';
+       document.getElementById('customerupdate').style.display='none';
         document.getElementById('login_name').innerHTML="HI, "+name;
      document.getElementById('login_email').innerHTML=email;
       document.getElementById('login_number').innerHTML=mobile;
