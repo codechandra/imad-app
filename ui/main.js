@@ -286,7 +286,7 @@ function seller_update()
     document.getElementById('seller_updateprofile').style.display="block";
      document.getElementById('seller_add_property').style.display="none";
       document.getElementById('seller_remove_property').style.display="none";
-           document.getElementById('after_seller_login').style.display="none";
+           document.getElementById('login_seller__main_display').style.display="none";
      
     
 }
@@ -295,14 +295,14 @@ function seller_addproperty()
      document.getElementById('seller_updateprofile').style.display="none";
      document.getElementById('seller_add_property').style.display="block";
       document.getElementById('seller_remove_property').style.display="none";
-           document.getElementById('after_seller_login').style.display="none";
+           document.getElementById('login_seller__main_display').style.display="none";
 }
 function seller_removeproperty()
 {
      document.getElementById('seller_updateprofile').style.display="none";
      document.getElementById('seller_add_property').style.display="none";
       document.getElementById('seller_remove_property').style.display="block";
-           document.getElementById('after_seller_login').style.display="none";
+           document.getElementById('login_seller__main_display').style.display="none";
 }
 function seller_logout()
 {
