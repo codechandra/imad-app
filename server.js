@@ -123,7 +123,7 @@ app.get('/hello1/:id',function(req,res){
        }
    }) ;
 });
-/*app.get('/update/:id',function(req,res){
+app.get('/update/:id',function(req,res){
     var value=req.params.id;
      var m=value.split('$');
     var one=(m[0]);
@@ -141,7 +141,7 @@ app.get('/hello1/:id',function(req,res){
    }) ;
     
   
-});*/
+});
 var pool=new Pool(config);
 pool.connect();
 app.get('/test-db',function(req,res){
