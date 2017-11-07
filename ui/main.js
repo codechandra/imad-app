@@ -9,6 +9,7 @@ function login_fun()
      document.getElementById('footer').style.display="none";
      
 }
+var xhttp;
 function login_form()
 {
     var uname=document.getElementById('username').value;
@@ -24,7 +25,7 @@ function login_form()
      var s="/hai1/"+uname+"$"+pwd+"$"+login_type;
     if(login_type==1)
     {
-    var xhttp = new XMLHttpRequest();
+     xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
        // Typical action to be performed when the document is ready:
@@ -47,8 +48,42 @@ xhttp.onreadystatechange = function() {
 xhttp.open("GET", s, true);
 xhttp.send();
 }
-    
-    
+else
+{
+     xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+       // Typical action to be performed when the document is ready:
+       //document.getElementById("demo").innerHTML = xhttp.responseText;
+       //var r=xhttp.responseText;
+     // alert("Thank you "+r+"You've successfully registered as a buyer");
+   // alert("Thank you "+xhttp.responseText+" You've successfullly registered as a buyer on E-estate.please login to see your profile");
+    //  login_fun();
+     /*document.getElementById('id01').style.display='block';
+         document.getElementById('set').innerHTML=xhttp.responseText[0]+" You've successfully registered as a seller on E-estate";*/
+         var d=(JSON.parse(xhttp.responseText));
+         after_seller_login_action(d);
+         /* document.getElementById('login').style.display="none";
+    document.getElementById('loginpage').style.display="block";
+    document.getElementById('login_name').innerHTML=d[0]["cname"];
+     document.getElementById('login_email').innerHTML=d[0]["cmail"];
+      document.getElementById('login_number').innerHTML=d[0]["cmobile"];*/
+    }
+};
+xhttp.open("GET", s, true);
+xhttp.send();
+}
+}
+function after_seller_login_action(d)
+{
+     document.getElementById('title').style.display="none";
+     document.getElementById('navigation_bar').style.display="none";
+     
+    document.getElementById('login').style.display="none";
+    document.getElementById('after_seller_login').style.display="block";
+    document.getElementById('seller_login_name').innerHTML="HI, "+d[0]["cname"];
+     document.getElementById('seller_login_email').innerHTML=d[0]["cmail"];
+      document.getElementById('seller_login_number').innerHTML=d[0]["cmobile"];
     
 }
 function afterlogin_action(d)
