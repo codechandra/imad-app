@@ -16,9 +16,6 @@ var config={
     port:'5432',
     password:process.env.DB_PASSWORD
 };
-app.get('/renderr',function(req,res){
-    res.render('donor',{title:'mouli'});
-});
 app.get('/hai/:id',function(req,res){
     var value=req.params.id;
     var m=value.split('$');
@@ -126,7 +123,7 @@ app.get('/hello1/:id',function(req,res){
        }
    }) ;
 });
-app.get('/update/:id',function(req,res){
+/*app.get('/update/:id',function(req,res){
     var value=req.params.id;
      var m=value.split('$');
     var one=(m[0]);
@@ -144,7 +141,7 @@ app.get('/update/:id',function(req,res){
    }) ;
     
   
-});
+});*/
 var pool=new Pool(config);
 pool.connect();
 app.get('/test-db',function(req,res){
@@ -164,90 +161,7 @@ app.get('/', function (req, res) {
   console.log("views:"+(++count));
 });
 
-function hash(input,salt){
-    var hashed=crypto.pbkdf2Sync(input,salt,10000,512, 'sha512');
-    return hashed.toString('hex');    
-    
-}
 
-
-app.get('/hash/:input', function (req, res) {
-    var hashedString=hash(req.params.input,'this-is-some-random-string');
-  res.send(hashedString);
-});
-app.get('/buyer',function(req,res){
-    res.send("request accepted");
-});
-app.get('/donor/:id',function(req,res){
-    var value=req.params.id;
-    var m=value.split('$');
-    var one=(m[0]);
-    var two=(m[1]);
-    var three=m[2];
-    pool.query('INSERT INTO donor(donor_mobile,donor_group,donor_name) VALUES ($1,$2,$3)',[one,two,three],function(err,result){
-       if(err){
-           res.status(500).send(err.toString());
-       }
-       else
-       {
-            var value=req.params.id;
-            var three=m[2];
-           res.send();
-       }
-   }) ;
-    
-});
-app.get('/recipent/:id',function(req,res){
-    var value=req.params.id;
-    var m=value.split('$');
-    var one=(m[0]);
-    var two=(m[1]);
-    var three=m[2];
-    console.log(two);
-    pool.query('SELECT donor_name,donor_mobile,donor_group FROM donor WHERE donor_group=$1 ',[two],function(err,result){
-       if(err){
-           res.send("error");
-       }
-       else
-       {
-         
-          /* var data=result.rows;
-           var s=[];
-           var mobileNumber=[];
-           var name_list=[];
-           var i=0;
-           s=data;
-          s.forEach(function (arrayElem){ 
-            mobileNumber[++i]=arrayElem.donor_mobile;
-            name_list[++j]=arrayElem.donor_name;
-    });*/
-        if(result.rows.length===0)
-        {
-            res.send("<body style='background-color:green'><h1 >Sorry we couldn't help you at this time.Hoping that everything goes well.</h1></body>");
-            
-        }
-        else
-        res.send(result.rows);
-        /*  res.send("<body ng-controller='CountryCtrl'><h2>Donor list</h2> <table><tr><th>Mobile number</th><th>Blood group</th><th>Name</th></tr><tr ng-repeat='country in data '><td>{{JSON.stringify(result.rows).donor_mobile}}</td><td>{{JSON.stringify(result.rows).donor_name}}</td><td>{{JSON.stringify(result.rows).donor_group}}</td></tr> </table></body>")
-          */
-        
-       
-       }
-          /*var data=[];
-          data=(result.rows);
-          var i, item;
-for (i = 0; i < data.length; i++) {
-    for (item in data[i]) {
-        res.send(item + ": " + data[i][item] + "<br>");
-    }
-}
-    */
-         
-       
-       
-   }) ;
-    
-});
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
