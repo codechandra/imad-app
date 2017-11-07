@@ -193,6 +193,7 @@ function propertyregister_fun()
        var ptype=document.getElementById('property_type');
     var choice = ptype.options[ptype.selectedIndex].text;
     var s="/hello2/"+namee+"$"+choice+"$"+parea+"$"+size+"$"+des;
+    alert(s+"  "+namee);
      var xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
