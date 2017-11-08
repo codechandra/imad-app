@@ -129,6 +129,25 @@ app.get('/update/:id',function(req,res){
     
   
 });
+app.get('/update1/:id',function(req,res){
+    var value=req.params.id;
+     var m=value.split('$');
+    var one=(m[0]);
+    var two=(m[1]);
+    var three=m[2];
+    var four=(m[3]);
+        pool.query('UPDATE seller1 SET sname=$1,semail=$2,spassword=$3,smobile=$4 WHERE semail=$5',[one,two,three,four,two],function(err,result){
+       if(err){
+           res.status(500).send(err.toString());
+       }
+       else
+       {
+           res.send("Thank you");
+       }
+   }) ;
+    
+  
+});
 var pool=new Pool(config);
 pool.connect();
 app.get('/test-db',function(req,res){
