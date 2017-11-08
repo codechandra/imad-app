@@ -342,7 +342,8 @@ function customer_bookproperty_loc()
     var xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-       alert(xhttp.responseText);
+        document.getElementById('customer').style.display="none";
+       document.getElementById('book_property_details').style.display="block";
        
     }
 };
