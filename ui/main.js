@@ -338,7 +338,17 @@ function seller_logout()
 function customer_bookproperty_loc()
 {
     var loc=document.getElementById('customer_book_property').value;
-    alert(loc);
+     var s="/bookproperty/"+loc;
+    var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+       alert(xhttp.responseText);
+       
+    }
+};
+xhttp.open("GET", s, true);
+xhttp.send();
+    
 }
 function customer_home()
 {
