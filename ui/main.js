@@ -297,11 +297,11 @@ function onseller_profile_update()
 xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
        alert("Your profile has been successfully updated");
-       document.getElementById('login_main_display').style.display='block';
-       document.getElementById('customerupdate').style.display='none';
-        document.getElementById('login_name').innerHTML="HI, "+name;
-     document.getElementById('login_email').innerHTML=email;
-      document.getElementById('login_number').innerHTML=mobile;
+       document.getElementById('login_seller_main_display').style.display='block';
+       document.getElementById('seller_updateprofile').style.display='none';
+        document.getElementById('seller_login_name').innerHTML="HI, "+name;
+     document.getElementById('seller_login_email').innerHTML=email;
+      document.getElementById('seller_login_number').innerHTML=mobile;
        
     }
 };
