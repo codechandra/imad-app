@@ -312,6 +312,9 @@ function seller_logout()
 function customer_home()
 {
      document.getElementById('login_main_display').style.display='block';
+      document.getElementById('customerupdate').style.display='none';
+    document.getElementById('customerbook').style.display='none';
+    document.getElementById('cancelproperty').style.display='none';
 }
 function customer_update()
 {
