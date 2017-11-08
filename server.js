@@ -130,7 +130,7 @@ app.get('/update/:id',function(req,res){
   
 });
 app.get('/bookproperty/:id',function(req,res){
-    re.send(req.params.id);
+    res.send(req.params.id);
 });
 app.get('/update1/:id',function(req,res){
     var value=req.params.id;
