@@ -335,7 +335,7 @@ function seller_logout()
       }
     
 }
-function customer_bookproperty()
+function customer_bookproperty_loc()
 {
     var loc=document.getElementById('customer_book_property').value;
     alert(loc);
