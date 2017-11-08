@@ -342,8 +342,14 @@ function customer_bookproperty_loc()
     var xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
+         var d=(JSON.parse(xhttp.responseText));
         document.getElementById('customerbook').style.display="none";
        document.getElementById('book_property_details').style.display="block";
+        document.getElementById('booked_property_type').innerHTML=d[0]["ptype"];
+         document.getElementById('booked_property_area').innerHTML=d[0]["parea"];
+          document.getElementById('booked_property_size').innerHTML=d[0]["psize"];
+           document.getElementById('booked_property_description').innerHTML=d[0]["pdescription"];
+       
        
     }
 };
