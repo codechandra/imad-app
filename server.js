@@ -137,7 +137,7 @@ app.get('/bookproperty/:id',function(req,res){
        }
        else
        {
-           res.send("Thank you");
+           res.send(result.rows);
        }
         
     });
