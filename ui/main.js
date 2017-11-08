@@ -292,7 +292,7 @@ function onseller_profile_update()
     window.alert("please enter all the fields");
     else
     {
-         var s="/update/"+name+"$"+email+"$"+mobile+"$"+password;
+         var s="/update1/"+name+"$"+email+"$"+password+"$"+mobile;
     var xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
