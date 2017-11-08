@@ -335,7 +335,11 @@ function seller_logout()
       }
     
 }
-
+function customer_bookproperty()
+{
+    var loc=document.getElementById('customr_book_property').value();
+    alert(loc);
+}
 function customer_home()
 {
      document.getElementById('login_main_display').style.display='block';
