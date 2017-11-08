@@ -130,7 +130,17 @@ app.get('/update/:id',function(req,res){
   
 });
 app.get('/bookproperty/:id',function(req,res){
-    res.send(req.params.id);
+    var value=req.params.id;
+    pool.query('SELECT *FROM property1 where parea=$1',[value],function(err,result){
+        if(err){
+           res.status(500).send(err.toString());
+       }
+       else
+       {
+           res.send("Thank you");
+       }
+        
+    });
 });
 app.get('/update1/:id',function(req,res){
     var value=req.params.id;
