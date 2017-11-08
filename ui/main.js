@@ -284,10 +284,10 @@ function seller_update()
 }
 function onseller_profile_update()
 {
-    var name=document.getElementById('updated_customer_name').value;
-    var mobile=document.getElementById('updated_customer_mobile').value;
-    var email=document.getElementById('updated_customer_email').value;
-    var password=document.getElementById('updated_customer_password').value;
+    var name=document.getElementById('updated_seller_name').value;
+    var mobile=document.getElementById('updated_seller_mobile').value;
+    var email=document.getElementById('updated_seller_email').value;
+    var password=document.getElementById('updated_seller_password').value;
     if(name==""||mobile==""||email==""||password=="")
     window.alert("please enter all the fields");
     else
